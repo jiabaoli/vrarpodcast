@@ -175,7 +175,7 @@
 })(jQuery);
 
 
-const margin = {top: 40, right: 10, bottom: 10, left: 10},
+const margin = {top: 40, right: 10, bottom: 50, left: 50},
     width = 960 - margin.left - margin.right,
     height = 500 - margin.top - margin.bottom,
     color = d3.scaleOrdinal().range(d3.schemeCategory20c);
@@ -223,3 +223,150 @@ d3.json("data/industry.json", function(error, data) {
             .style("height", (d) => Math.max(0, d.y1 - d.y0  - 1) + "px")
     });
 });
+
+
+var g2 = d3.select("#visualization1b").append("svg")
+    .attr("width", width + margin.left + margin.right)
+    .attr("height", height + margin.top + margin.bottom)
+    .append("g")
+    .attr("transform", "translate(" + margin.left + "," + margin.top + ")");
+var g3 = d3.select("#visualization1c").append("svg")
+    .attr("width", width + margin.left + margin.right)
+    .attr("height", height + margin.top + margin.bottom)
+    .append("g")
+    .attr("transform", "translate(" + margin.left + "," + margin.top + ")");
+
+d3.csv("data/brand.csv", function(data) {
+    var formatter = d3.format("0f");
+    // var formatter = d3.format(".0%");
+    var interval = 80;
+    var x = d3.scaleOrdinal()
+        .domain(["Samsung Gear VR", "PlayStation VR", "HTC Vive", "Google Daydream", "Oculus Rift"])
+        .range([interval*0.5, interval*1.5, interval*2.5, interval*3.5, interval*4.5]);
+
+    var y = d3.scaleLinear()
+        .domain([0, 4600])
+        .range([height, 0]);
+
+    var xAxis = d3.axisBottom()
+        .scale(x);
+
+    var yAxis = d3.axisLeft()
+        .scale(y);
+
+    var xAxisGroup = g2.append("g")
+        .attr("class", "x-axis axis");
+
+    var yAxisGroup = g2.append("g")
+        .attr("class", "y-axis axis");
+    data.forEach(function(d){
+        d.Shipments = +d.Shipments;
+    });
+
+    g2.selectAll("rect").data(data)
+        .enter()
+        .append("rect")
+        .attr("fill", "#e1666b")
+        .attr("width", interval/2)
+        .attr("height", function(d){ return height - y(d.Shipments); })
+        .attr("x", function(d, index) {
+            return (index*interval+10);
+        })
+        .attr("y", function(d){ return y(d.Shipments); });
+
+    g2.selectAll("tex-height").data(data)
+        .enter()
+        .append("text")
+        .attr("color", "black")
+        .attr("class", "height-label")
+        .attr("x", function(d, index) {
+            return (index*interval+25);
+        })
+        .attr("y", function(d) {
+            return y(d.Shipments)-10;})
+        .text( function (d) { return d.Shipments; } );
+
+    xAxisGroup = g2.select(".x-axis")
+        .attr("transform", "translate(0," + height + ")")
+        .call(xAxis);
+
+    yAxisGroup = g2.select(".y-axis")
+        .call(yAxis);
+
+    // g2.append("text")
+    //     .attr("x", (width / 2))
+    //     .attr("y", 0)
+    //     .attr("text-anchor", "middle")
+    //     .style("font-size", "16px")
+    //     .text("Global virtual reality headset shipments by brand 2016 (in 1,000s)");
+
+});
+
+//-----------geo bar chart
+d3.csv("data/geo.csv", function(data) {
+    var formatter = d3.format("0f");
+    // var formatter = d3.format(".0%");
+    var interval = 80;
+    var x = d3.scaleOrdinal()
+        .domain(["Americas", "EMEA", "APAC"])
+        .range([interval*0.5, interval*1.5, interval*2.5]);
+
+    var y = d3.scaleLinear()
+        .domain([0, 100])
+        .range([height, 0]);
+
+    var xAxis = d3.axisBottom()
+        .scale(x);
+
+    var yAxis = d3.axisLeft()
+        .scale(y);
+
+    var xAxisGroup = g3.append("g")
+        .attr("class", "x-axis axis");
+
+    var yAxisGroup = g3.append("g")
+        .attr("class", "y-axis axis");
+    data.forEach(function(d){
+        d.Shipments = +d.Shipments;
+    });
+
+    g3.selectAll("rect").data(data)
+        .enter()
+        .append("rect")
+        .attr("fill", "#e1666b")
+        .attr("width", interval/2)
+        .attr("height", function(d){ return height - y(d.Shipments); })
+        .attr("x", function(d, index) {
+            return (index*interval+10);
+        })
+        .attr("y", function(d){ return y(d.Shipments); });
+
+    g3.selectAll("tex-height").data(data)
+        .enter()
+        .append("text")
+        .attr("color", "black")
+        .attr("class", "height-label")
+        .attr("x", function(d, index) {
+            return (index*interval+25);
+        })
+        .attr("y", function(d) {
+            return y(d.Shipments)-10;})
+        .text( function (d) { return d.Shipments; } );
+
+    xAxisGroup = g3.select(".x-axis")
+        .attr("transform", "translate(0," + height + ")")
+        .call(xAxis);
+
+    yAxisGroup = g3.select(".y-axis")
+        .call(yAxis);
+
+    // g3.append("text")
+    //     .attr("x", (width / 2))
+    //     .attr("y", 0)
+    //     .attr("text-anchor", "middle")
+    //     .style("font-size", "16px")
+    //     .text("Global virtual reality market share by geography 2015-2019 (in %)");
+
+});
+
+
