@@ -1,0 +1,30 @@
+{
+  "name": "industry",
+  "children": [
+    {"name": "Entertainment", "size": 66},
+    {"name": "Education", "size": 61},
+    {"name": "Marketing/media", "size": 57},
+    {"name": "Healthcare/medical", "size": 55},
+
+    {"name": "Travel", "size": 55},
+    {"name": "Technology", "size": 44},
+    {"name": "Real Estate", "size": 41},
+    {"name": "Government/Military", "size": 39},
+
+    {"name": "Engineering", "size": 37},
+    {"name": "Aerospace", "size": 35},
+    {"name": "Retail", "size": 33},
+    {"name": "Transportation", "size": 33},
+
+    {"name": "Manufacturing", "size": 25},
+    {"name": "Telecommunications", "size": 24},
+    {"name": "Mining/Construction/Petroleum/Agriculture", "size": 18},
+    {"name": "Utilities", "size": 12},
+
+    {"name": "Financial/Banking", "size": 11},
+    {"name": "Insurance", "size": 8},
+    {"name": "Legal", "size": 2},
+    {"name": "Unsure", "size": 3},
+    {"name": "Other", "size": 1}
+  ]
+}
