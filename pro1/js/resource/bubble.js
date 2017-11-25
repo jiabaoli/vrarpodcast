@@ -1,73 +1,31 @@
 dataset = {
     "children": [{
-        "facilityId": "Entertainment",
-        "responseCount": 66
+        "facilityId": "18-24",
+        "responseCount": 21
     }, {
-        "facilityId": "Education",
-        "responseCount": 61
+        "facilityId": "25-34",
+        "responseCount": 22
     }, {
-        "facilityId": "Marketing/media",
-        "responseCount": 57
+        "facilityId": "35-44",
+        "responseCount": 31
     }, {
-        "facilityId": "Healthcare/medical",
-        "responseCount":55
+        "facilityId": "45-54",
+        "responseCount":38
     }, {
-        "facilityId": "Travel",
-        "responseCount": 55
+        "facilityId": "55-64",
+        "responseCount": 50
     }, {
-        "facilityId": "Technology",
-        "responseCount": 44
-    }, {
-        "facilityId": "Real Estate",
-        "responseCount": 41
-    }, {
-        "facilityId": "Government/Military",
-        "responseCount": 39
-    }, {
-        "facilityId": "Engineering",
-        "responseCount": 37
-    }, {
-        "facilityId": "Aerospace",
-        "responseCount": 35
-    }, {
-        "facilityId": "Retail",
-        "responseCount": 33
-    }, {
-        "facilityId": "Transportation",
-        "responseCount": 33
-    }, {
-        "facilityId": "Manufacturing",
-        "responseCount": 25
-    }, {
-        "facilityId": "Telecommunications",
-        "responseCount": 24
-    }, {
-        "facilityId": "Mining/Construction/Petroleum/Agriculture",
-        "responseCount": 18
-    }, {
-        "facilityId": "Utilities",
-        "responseCount": 12
-    }, {
-        "facilityId": "Insurance",
-        "responseCount": 8
-    }, {
-        "facilityId": "Legal",
-        "responseCount": 2
-    }, {
-        "facilityId": "Unsure",
-        "responseCount": 3
-    }, {
-        "facilityId": "Other",
-        "responseCount": 1
+        "facilityId": "65+",
+        "responseCount": 54
     }
     ]
 };
 
-var diameter = 600;
+var diameter = 400;
 var colorb = d3.scaleOrdinal(d3.schemeCategory20);
 
 var bubble = d3.pack(dataset)
-    .size([diameter, diameter])
+    .size([diameter * 0.8, diameter * 0.8])
     .padding(1.5);
 var svg = d3.select("#visualization1a")
     .append("svg")
@@ -92,7 +50,7 @@ var node = svg.selectAll(".node")
 
 node.append("title")
     .text(function(d) {
-        return d.facilityId + ": " + d.responseCount;
+        return d.facilityId + ": " + d.responseCount * 0.01;
     });
 
 node.append("circle")
@@ -107,7 +65,70 @@ node.append("text")
     .attr("dy", ".3em")
     .style("text-anchor", "middle")
     .text(function(d) {
-        return d.data.facilityId.substring(0, d.r / 3) + ": " + d.data.responseCount;
+        return d.data.facilityId.substring(0, d.r / 3) + ": " + d.data.responseCount + "%";
+    });
+
+d3.select(self.frameElement)
+    .style("height", diameter + "px");
+
+dataset2 = {
+    "children": [{
+        "facilityId": "Completely agree",
+        "responseCount": 26
+    }, {
+        "facilityId": "Somewhat agree",
+        "responseCount": 46
+    }, {
+        "facilityId": "Somewhat disagree",
+        "responseCount": 11
+    }, {
+        "facilityId": "Completely disagree",
+        "responseCount":3
+    }, {
+        "facilityId": "Don't know",
+        "responseCount": 14
+    }
+    ]
+};
+var svg2 = d3.select("#visualization1c")
+    .append("svg")
+    .attr("width", diameter)
+    .attr("height", diameter)
+    .attr("class", "bubble");
+
+var nodes2 = d3.hierarchy(dataset2)
+    .sum(function(d) { return d.responseCount; });
+
+var node2 = svg2.selectAll(".node")
+    .data(bubble(nodes2).descendants())
+    .enter()
+    .filter(function(d){
+        return  !d.children
+    })
+    .append("g")
+    .attr("class", "node")
+    .attr("transform", function(d) {
+        return "translate(" + d.x + "," + d.y + ")";
+    });
+
+node2.append("title")
+    .text(function(d) {
+        return d.facilityId + ": " + d.responseCount;
+    });
+
+node2.append("circle")
+    .attr("r", function(d) {
+        return d.r;
+    })
+    .style("fill", function(d) {
+        return colorb(d.responseCount);
+    });
+
+node2.append("text")
+    .attr("dy", ".3em")
+    .style("text-anchor", "middle")
+    .text(function(d) {
+        return d.data.facilityId.substring(0, d.r / 3) + ": " + d.data.responseCount + "%";
     });
 
 d3.select(self.frameElement)
