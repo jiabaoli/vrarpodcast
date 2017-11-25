@@ -103,7 +103,6 @@ function loadData() {
                 return y(+d.closes);
             });
 
-        var lineSvg = svg.append("g");
 
         var focus = svg.append("g")
             .style("display", "none");
@@ -139,58 +138,90 @@ function loadData() {
             .datum(data)
             .attr("class", "area")
             .attr("fill", "red")
-            .attr("opacity", 0.3)
+            .attr("opacity", 0.1)
             .attr("d", area);
 
         svg.append("path")
             .datum(data)
             .attr("class", "area")
             .attr("fill", "red")
-            .attr("opacity", 0.3)
+            .attr("opacity", 0.1)
             .attr("d", area4);
 
         svg.append("path")
             .datum(data)
             .attr("class", "area")
             .attr("fill", "red")
-            .attr("opacity", 0.3)
+            .attr("opacity", 0.1)
             .attr("d", area2);
 
         svg.append("path")
             .datum(data)
             .attr("class", "area")
             .attr("fill", "red")
-            .attr("opacity", 0.3)
+            .attr("opacity", 0.1)
             .attr("d", area3);
 
 
-
         var valueline = d3.line()
-            .x(function (d) {
-                return x(+d.date);
-            })
-            .y(function (d) {
-                return y(+d.close) + 50 ;
-            });
+            .x(function (d) {return x(+d.date);})
+            .y(function (d) {return y(+d.close);});
 
+        var valueline2 = d3.line()
+            .x(function (d) {return x(+d.date);})
+            .y(function (d) {return y(+d.closes);});
 
-        lineSvg.append("path")
-            .attr("class", "line")
-            .attr("data", valueline(data));
+        var valueline3 = d3.line()
+            .x(function (d) {return x(+d.date);})
+            .y(function (d) {return y(+d.closef);});
 
-        svg.append("path")
+        var valueline4 = d3.line()
+            .x(function (d) {return x(+d.date);})
+            .y(function (d) {return y(+d.closem);});
+
+        var lineSvg = svg.append("g");
+
+        svg.append('g')
+            .attr('class', 'lineStock');
+
+        svg.select("g.lineStock")
             .datum(data)
-            .attr("class", "line")
-            .attr("data", line);
+            .append("path")
+            .attr("d", valueline(data));
+
+        svg.select("g.lineStock")
+            .datum(data)
+            .append("path")
+            .attr("d", valueline2(data));
+
+        svg.select("g.lineStock")
+            .datum(data)
+            .append("path")
+            .attr("d", valueline3(data));
+
+        svg.select("g.lineStock")
+            .datum(data)
+            .append("path")
+            .attr("d", valueline4(data));
+
+        // lineSvg.append("path")
+        //     .attr("class", "line")
+        //     .attr("data", valueline(data));
+
+        // svg.append("path")
+        //     .datum(data)
+        //     .attr("class", "line")
+        //     .attr("data", line);
+
         // X Axis
         svg.append("g")
             .attr("class", "xaxis axis axis-date")
             .attr("transform", "translate(0," + height + ")")
             .call(xAxis);
 
-        d3.selectAll(".axis-date .tick text")
-            .attr("transform", "translate(-15,20) rotate(-45)");
-
+        // d3.selectAll(".axis-date .tick text")
+        //     .attr("transform", "translate(-15,20) rotate(-45)");
+        //
 
 
         // Y Axis

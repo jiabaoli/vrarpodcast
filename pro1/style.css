@@ -863,8 +863,8 @@ form {
   /*margin: 0;*/
 /*}*/
 
-/*.line {*/
-  /*fill: black;*/
-  /*stroke: #666;*/
-  /*stroke-width: 2px;*/
-/*}*/
+.lineStock {
+  fill: none;
+  stroke: #666;
+  stroke-width: 1px;
+}
