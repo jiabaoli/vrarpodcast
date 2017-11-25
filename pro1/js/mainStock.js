@@ -22,22 +22,26 @@ function loadData() {
         // var dataLength = d.length;
         var PriceArray = [];
         var DateArray = [];
+        var DateArray2 = [];
         var dateForTooltip = [];
 
         data.forEach(function (d) {
             PriceArray.push(+d.close);
             DateArray.push(d3.isoParse(d.date));
+            DateArray2.push(d.date);
             dateForTooltip.push(d.date);
             d.close = (+d.close);
             d.closef = (+d.closef);
             d.closem = (+d.closem);
             d.closes = (+d.closes);
+            // console.log(d.date);
             d.date = (d3.isoParse(d.date));
+            // console.log(d.date);
             //d.date = parseDate(d.date);
         });
 
+        console.log(DateArray2);
         console.log(DateArray);
-        console.log(PriceArray);
 
         var width = 1100 - margin.left - margin.right,
             height = 500 - margin.top - margin.bottom;
@@ -204,6 +208,83 @@ function loadData() {
             .append("path")
             .attr("d", valueline4(data));
 
+///////////////////////
+        svg.append("line")
+            .attr("class", "y")
+            .style("stroke", "red")
+            .style("stroke-dasharray", "4,4")
+            .style("opacity", 1)
+            .attr("y1", 0)
+            .attr("y2", height +500);
+
+        svg.append("text")
+            .attr("class", "t")
+            .attr("x", 10)
+            .attr("y", margin.top +420);
+
+        svg.select(".t")
+            .attr("transform",
+                "translate(" + 225  + "," +
+                0 + ")")
+            .text( "OCULUS" );
+
+        svg.select("line.y")
+            .attr("transform",
+                "translate(" + 245  + "," +
+                0 + ")")
+            .text( "Snap : ");
+///////////////////////
+        svg.append("line")
+            .attr("class", "y2")
+            .style("stroke", "red")
+            .style("stroke-dasharray", "4,4")
+            .style("opacity", 1)
+            .attr("y1", 0)
+            .attr("y2", height+500);
+
+
+        svg.append("text")
+            .attr("class", "t2")
+            .attr("x", 10)
+            .attr("y", margin.top +420);
+
+        svg.select(".t2")
+            .attr("transform",
+                "translate(" + 805  + "," +
+                -13 + ")")
+            .text( "HOLOLENS" );
+
+        svg.select("line.y2")
+            .attr("transform",
+                "translate(" + 855  + "," +
+                0 + ")");
+
+///////////////////////
+        svg.append("line")
+            .attr("class", "y3")
+            .style("stroke", "red")
+            .style("stroke-dasharray", "4,4")
+            .style("opacity", 1)
+            .attr("y1", 0)
+            .attr("y2", height+600);
+
+
+        svg.append("text")
+            .attr("class", "t3")
+            .attr("x", 10)
+            .attr("y", margin.top +420);
+
+        svg.select(".t3")
+            .attr("transform",
+                "translate(" + 850  + "," +
+                0 + ")")
+            .text( "DAYDREAM + SPECTACLES" );
+
+        svg.select("line.y3")
+            .attr("transform",
+                "translate(" + 915  + "," +
+                0 + ")");
+
         // lineSvg.append("path")
         //     .attr("class", "line")
         //     .attr("data", valueline(data));
@@ -299,7 +380,7 @@ function loadData() {
         focus.append("text")
             .attr("class", "tDate")
             .attr("x", 10)
-            .attr("y", margin.top + 30);
+            .attr("y", -10);
 
 
         //append the rectangle to capture mouse
@@ -366,6 +447,7 @@ function loadData() {
                     "translate(" + x(dd.date) + "," +
                     0 + ")")
                 .text(dateForTooltip[i]);
+
 
             focus.select(".t")
                 .attr("transform",

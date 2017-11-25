@@ -868,3 +868,9 @@ form {
   stroke: #666;
   stroke-width: 1px;
 }
+
+.tDate{
+  font-size: 14px;
+  font-family: monospace;
+  font-style: italic;
+}
