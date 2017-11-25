@@ -1,0 +1,32 @@
+
+
+#word {
+  font-size:20px;
+  fill: #fc5a66;
+}
+
+.sentence {
+  opacity: 0;
+  fill: #ff000c;
+}
+
+.highlight {
+  fill: #ff000c;
+  opacity: 0;
+}
+
+.line {
+  stroke: #fc7d87;
+  stroke-width:1;
+  fill:none;
+  pointer-events: none;
+}
+
+#vis {
+  /*font-size: 2px;*/
+}
+
+#vis .word {
+  /*opacity: 0.4;*/
+  font-size:16px;
+}
