@@ -1,5 +1,5 @@
-const treemap = d3.treemap().size([width * 0.5, height * 0.5]);
-const treemap2 = d3.treemap().size([width * 0.5, height * 0.5]);
+const treemap = d3.treemap().size([width * 0.9, height * 0.9]);
+const treemap2 = d3.treemap().size([width * 0.9, height * 0.9]);
 
 const div = d3.select("#visualization1").append("div")
     .style("position", "relative")
@@ -24,7 +24,7 @@ d3.json("data/industry.json", function(error, data) {
         .style("top", (d) => d.y0 + "px")
         .style("width", (d) => Math.max(0, d.x1 - d.x0 - 1) + "px")
         .style("height", (d) => Math.max(0, d.y1 - d.y0  - 1) + "px")
-        .style("background", (d) => color(d.parent.data.name))
+        .style("background", (d) => color(d.data.color))
         .text((d) => d.data.name);
 
     d3.selectAll("input").on("change", function change() {
@@ -60,11 +60,11 @@ d3.json("data/market_size.json", function(error, data) {
         .enter().append("div")
         .attr("class", "node")
         .style("left", (d) => d.x0 + "px")
-.style("top", (d) => d.y0 + "px")
-.style("width", (d) => Math.max(0, d.x1 - d.x0 - 1) + "px")
-.style("height", (d) => Math.max(0, d.y1 - d.y0  - 1) + "px")
-.style("background", (d) => color(d.parent.data.name))
-.text((d) => d.data.name);
+        .style("top", (d) => d.y0 + "px")
+        .style("width", (d) => Math.max(0, d.x1 - d.x0 - 1) + "px")
+        .style("height", (d) => Math.max(0, d.y1 - d.y0  - 1) + "px")
+        .style("background", (d) => color(d.data.color))
+        .text((d) => d.data.name);
 
     d3.selectAll("input").on("change", function change() {
         const value = this.value === "count"

@@ -1,30 +1,29 @@
 {
   "name": "industry",
   "children": [
-    {"name": "Entertainment", "size": 66},
-    {"name": "Education", "size": 61},
-    {"name": "Marketing/media", "size": 57},
-    {"name": "Healthcare/medical", "size": 55},
+    {"name": "Entertainment", "size": 66, "color": 1},
+    {"name": "Education", "size": 61, "color": 1},
+    {"name": "Marketing/media", "size": 57, "color": 1},
+    {"name": "Healthcare/medical", "size": 55, "color": 1},
+    {"name": "Travel", "size": 55, "color": 1},
 
-    {"name": "Travel", "size": 55},
-    {"name": "Technology", "size": 44},
-    {"name": "Real Estate", "size": 41},
-    {"name": "Government/Military", "size": 39},
+    {"name": "Technology", "size": 44, "color": 2},
+    {"name": "Real Estate", "size": 41, "color": 2},
+    {"name": "Government/Military", "size": 39, "color": 2},
+    {"name": "Engineering", "size": 37, "color": 2},
+    {"name": "Aerospace", "size": 35, "color": 2},
+    {"name": "Retail", "size": 33, "color": 2},
 
-    {"name": "Engineering", "size": 37},
-    {"name": "Aerospace", "size": 35},
-    {"name": "Retail", "size": 33},
-    {"name": "Transportation", "size": 33},
+    {"name": "Transportation", "size": 33, "color": 3},
+    {"name": "Manufacturing", "size": 25, "color": 3},
+    {"name": "Telecommunications", "size": 24, "color": 3},
+    {"name": "Mining/Construction/Petroleum/Agriculture", "size": 18, "color": 3},
+    {"name": "Utilities", "size": 12, "color": 3},
 
-    {"name": "Manufacturing", "size": 25},
-    {"name": "Telecommunications", "size": 24},
-    {"name": "Mining/Construction/Petroleum/Agriculture", "size": 18},
-    {"name": "Utilities", "size": 12},
-
-    {"name": "Financial/Banking", "size": 11},
-    {"name": "Insurance", "size": 8},
-    {"name": "Legal", "size": 2},
-    {"name": "Unsure", "size": 3},
-    {"name": "Other", "size": 1}
+    {"name": "Financial/Banking", "size": 11, "color": 4},
+    {"name": "Insurance", "size": 8, "color": 4},
+    {"name": "Legal", "size": 2, "color": 4},
+    {"name": "Unsure", "size": 3, "color": 4},
+    {"name": "Other", "size": 1, "color": 4}
   ]
 }

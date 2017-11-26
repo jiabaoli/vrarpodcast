@@ -813,6 +813,12 @@ form {
   text-indent: 2px;
 }
 
+.line1 {
+  fill: none;
+  stroke: steelblue;
+  stroke-width: 2px;
+}
+
 .line2 {
   fill: none;
   stroke: orange;
@@ -823,4 +829,42 @@ form {
   fill: none;
   stroke: red;
   stroke-width: 2px;
+}
+
+
+#visualization1 text {
+  fill:white;
+  size: 8px;
+}
+
+#visualization2 text {
+  fill:white;
+  size: 8px;
+}
+
+
+#visualization1a text {
+  fill:white;
+  size: 5px;
+}
+
+#visualization1c text {
+  fill:white;
+  size: 5px;
+}
+
+#visualization1 text {
+  fill:white;
+  size: 8px;
+}
+
+#visualization2 text {
+  fill:white;
+  size: 8px;
+}
+
+.carousel-item {
+  width: 900px;
+  height: auto;
+  text-align: center;
 }

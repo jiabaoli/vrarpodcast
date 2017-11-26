@@ -205,13 +205,15 @@ d3.csv("data/brand.csv", function(data) {
         .scale(x);
 
     var yAxis = d3.axisLeft()
-        .scale(y);
+        .scale(y)
+        .ticks(10);
 
     var xAxisGroup = g2.append("g")
         .attr("class", "x-axis axis");
 
     var yAxisGroup = g2.append("g")
         .attr("class", "y-axis axis");
+
     data.forEach(function(d){
         d.Shipments = +d.Shipments;
     });
@@ -220,6 +222,7 @@ d3.csv("data/brand.csv", function(data) {
         .enter()
         .append("rect")
         .attr("fill", "#e1666b")
+        .attr("transform", "translate(40," + 0 + ")")
         .attr("width", interval/2)
         .attr("height", function(d){ return height - y(d.Shipments); })
         .attr("x", function(d, index) {
@@ -230,28 +233,217 @@ d3.csv("data/brand.csv", function(data) {
     g2.selectAll("tex-height").data(data)
         .enter()
         .append("text")
+        .attr("transform", "translate(40," + 0 + ")")
         .attr("color", "black")
         .attr("class", "height-label")
         .attr("x", function(d, index) {
-            return (index*interval+25);
+            return (index*interval+22);
         })
         .attr("y", function(d) {
             return y(d.Shipments)-10;})
         .text( function (d) { return d.Shipments; } );
 
     xAxisGroup = g2.select(".x-axis")
-        .attr("transform", "translate(0," + height + ")")
+        .attr("transform", "translate(30," + height + ")")
         .call(xAxis);
 
     yAxisGroup = g2.select(".y-axis")
+        .attr("transform", "translate(40," + 0 + ")")
         .call(yAxis);
 
-    // g2.append("text")
-    //     .attr("x", (width / 2))
-    //     .attr("y", 0)
-    //     .attr("text-anchor", "middle")
-    //     .style("font-size", "16px")
-    //     .text("Global virtual reality headset shipments by brand 2016 (in 1,000s)");
+    g2.append("text")
+        .attr("x", (width / 2 - 450))
+        .attr("y", -10)
+        .attr("text-anchor", "left")
+        .style("font-size", "16px")
+        .text("shipments (in 1,000s)");
 
 });
 
+var g3 = d3.select("#visualization1e").append("svg")
+    .attr("width", width + margin.left + margin.right)
+    .attr("height", height + margin.top + margin.bottom)
+    .append("g")
+    .attr("transform", "translate(" + margin.left + "," + margin.top + ")");
+
+
+d3.csv("data/adoption.csv", function(data) {
+
+    // format the data
+    data.forEach(function(d) {
+        d.year = +d.year;
+        d.Lowadoption = +d.Lowadoption;
+        d.Mediumadoption = +d.Mediumadoption;
+        d.Highadoption = +d.Highadoption;
+    });
+
+    console.log(data);
+
+
+    // var formatter = d3.format(".0%");
+    var interval = 80;
+    var x = d3.scaleOrdinal()
+        .domain(["2016", "2017", "2018", "2019", "2020"])
+        .range([interval*0.5, interval*1.5, interval*2.5, interval*3.5, interval*4.5]);
+
+    var y = d3.scaleLinear()
+        .range([height, 0])
+        .domain([0, d3.max(data, function(d) { return d.Highadoption; })]);
+
+    var xAxis = d3.axisBottom()
+        .scale(x);
+
+    var yAxis = d3.axisLeft()
+        .scale(y)
+        .ticks(10);
+
+    var xAxisGroup = g3.append("g")
+        .attr("class", "x-axis axis");
+
+    var yAxisGroup = g3.append("g")
+        .attr("class", "y-axis axis");
+
+
+    // define the line
+    var valueline = d3.line()
+        .x(function(d) { return x(d.year); })
+        .y(function(d) { return y(d.Lowadoption); });
+
+
+    // define the line
+    var valueline2 = d3.line()
+        .x(function(d) { return x(d.year); })
+        .y(function(d) { return y(d.Mediumadoption); });
+
+    // define the line
+    var valueline3 = d3.line()
+        .x(function(d) {
+            console.log(d.year);
+            return x(d.year);
+        })
+        .y(function(d) { return y(d.Highadoption); });
+
+
+    // Add the valueline path.
+    g3.append("path")
+        .data([data])
+        .attr("transform", "translate(25," + 0 + ")")
+        .attr("class", "line1")
+        .attr("d", valueline);
+
+    // Add the valueline path.
+    g3.append("path")
+        .data([data])
+        .attr("transform", "translate(25," + 0 + ")")
+        .attr("class", "line2")
+        .attr("d", valueline2);
+
+    // Add the valueline path.
+    g3.append("path")
+        .data([data])
+        .attr("transform", "translate(25," + 0 + ")")
+        .attr("class", "line3")
+        .attr("d", valueline3);
+
+
+    var circle = g3.selectAll("circle")
+        .data(data);
+
+    circle.enter().append("circle")
+        .merge(circle)
+        .transition()
+        .duration(500)
+        .attr("transform", "translate(25," + 0 + ")")
+        .attr("cx", function(d) {
+            return x(d.year);
+        })
+        .attr("cy", function(d) {
+            return y(d.Lowadoption);
+        })
+        .attr("r", 5)
+        .attr("fill", "steelblue");
+
+    circle.enter().append("circle")
+        .merge(circle)
+        .transition()
+        .duration(500)
+        .attr("transform", "translate(25," + 0 + ")")
+        .attr("cx", function(d) {
+            return x(d.year);
+        })
+        .attr("cy", function(d) {
+            return y(d.Highadoption);
+        })
+        .attr("r", 5)
+        .attr("fill", "red");
+
+    circle.enter().append("circle")
+        .merge(circle)
+        .transition()
+        .duration(500)
+        .attr("transform", "translate(25," + 0 + ")")
+        .attr("cx", function(d) {
+            return x(d.year);
+        })
+        .attr("cy", function(d) {
+            return y(d.Mediumadoption);
+        })
+        .attr("r", 5)
+        .attr("fill", "orange");
+
+    xAxisGroup = g3.select(".x-axis")
+        .attr("transform", "translate(25," + height + ")")
+        .call(xAxis);
+
+    yAxisGroup = g3.select(".y-axis")
+        .attr("transform", "translate(40," + 0 + ")")
+        .call(yAxis);
+
+    g3.append("text")
+        .attr("x", (width / 2 - 450))
+        .attr("y", -10)
+        .attr("text-anchor", "left")
+        .style("font-size", "16px")
+        .text("Adoption rate (%)");
+
+    g3.append("text")
+        .attr("x", (width / 2 - 400))
+        .attr("y", 10)
+        .attr("text-anchor", "left")
+        .style("font-size", "16px")
+        .text("Low adoption");
+
+    g3.append("text")
+        .attr("x", (width / 2 - 400))
+        .attr("y", 25)
+        .attr("text-anchor", "left")
+        .style("font-size", "16px")
+        .text("Medium adoption");
+
+    g3.append("text")
+        .attr("x", (width / 2 - 400))
+        .attr("y", 40)
+        .attr("text-anchor", "left")
+        .style("font-size", "16px")
+        .text("High adoption");
+
+
+
+    g3.append("circle")
+        .attr("cx", x(2016) + 25)
+        .attr("cy", 35)
+        .attr("r", 5)
+        .attr("fill", "red");
+
+    g3.append("circle")
+        .attr("cx", x(2016) + 25)
+        .attr("cy", 20)
+        .attr("r", 5)
+        .attr("fill", "orange");
+
+    g3.append("circle")
+        .attr("cx", x(2016) + 25)
+        .attr("cy", 5)
+        .attr("r", 5)
+        .attr("fill", "steelblue");
+});
