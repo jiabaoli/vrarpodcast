@@ -874,3 +874,8 @@ form {
   font-family: monospace;
   font-style: italic;
 }
+
+.dot {
+  fill: #ffab00;
+  stroke: #fff;
+}
