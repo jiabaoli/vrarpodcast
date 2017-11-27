@@ -40,6 +40,7 @@ var svg = d3.select("#visualization1a")
     .attr("height", diameter)
     .attr("class", "bubble");
 
+
 var nodes = d3.hierarchy(dataset)
     .sum(function(d) { return d.responseCount; });
 
@@ -66,7 +67,8 @@ node.append("circle")
     })
     .style("fill", function(d) {
         return colorb(d.data.color);
-    });
+    })
+    .attr("fill", "#a9592a");
 
 node.append("text")
     .attr("dy", ".3em")
