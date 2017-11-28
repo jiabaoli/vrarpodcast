@@ -175,7 +175,7 @@
 })(jQuery);
 
 
-const margin = {top: 40, right: 10, bottom: 50, left: 0},
+const margin = {top: 40, right: 10, bottom: 50, left: 30},
     width = 960 - margin.left - margin.right,
     height = 500 - margin.top - margin.bottom,
     color = d3.scaleOrdinal().range(d3.schemeCategory20c);

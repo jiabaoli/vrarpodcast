@@ -839,6 +839,62 @@ form {
   stroke-width: 2px;
 }
 
+<<<<<<< HEAD
+
+/**** Stock Chart Area ****/
+
+.bar {
+  fill: #3C948B;
+}
+
+.bar:hover {
+  fill: #327972;
+}
+
+.axis {
+  font: 10px sans-serif;
+}
+
+.axis path,
+.axis line,
+
+.domain {
+  fill: none;
+  stroke: #888;
+  shape-rendering: crispEdges;
+}
+
+#chart-area text {
+  font-size: 11px;
+}
+
+.axis-label {
+  fill: #888;
+  font-size: 10px;
+}
+
+/*body {*/
+  /*font: 10px sans-serif;*/
+  /*margin: 0;*/
+/*}*/
+
+.lineStock {
+  fill: none;
+  stroke: #666;
+  stroke-width: 1px;
+}
+
+.tDate{
+  font-size: 14px;
+  font-family: monospace;
+  font-style: italic;
+}
+
+.dot {
+  fill: #ffab00;
+  stroke: #fff;
+}
+
 #visualization1 .node {
   padding-top: 10px;
   text-align: center;
