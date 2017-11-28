@@ -1,28 +1,35 @@
 dataset = {
-    "children": [{
-        "facilityId": "18-24",
-        "responseCount": 21
-    }, {
-        "facilityId": "25-34",
-        "responseCount": 22
-    }, {
-        "facilityId": "35-44",
-        "responseCount": 31
-    }, {
-        "facilityId": "45-54",
-        "responseCount":38
-    }, {
-        "facilityId": "55-64",
-        "responseCount": 50
-    }, {
-        "facilityId": "65+",
-        "responseCount": 54
-    }
+    "children": [
+        {
+            "facilityId": "65+",
+            "responseCount": 54,
+            "color": 9
+        },{
+            "facilityId": "55-64",
+            "responseCount": 50,
+            "color": 9
+        },{
+            "facilityId": "45-54",
+            "responseCount":38,
+            "color": 10
+        },{
+            "facilityId": "35-44",
+            "responseCount": 31,
+            "color": 10
+        },{
+            "facilityId": "25-34",
+            "responseCount": 22,
+            "color": 11
+        },{
+            "facilityId": "18-24",
+            "responseCount": 21,
+            "color": 12
+        }
     ]
 };
 
-var diameter = 400;
-var colorb = d3.scaleOrdinal(d3.schemeCategory20);
+var diameter = 500;
+var colorb = d3.scaleOrdinal(d3.schemeCategory20c);
 
 var bubble = d3.pack(dataset)
     .size([diameter * 0.8, diameter * 0.8])
@@ -32,6 +39,7 @@ var svg = d3.select("#visualization1a")
     .attr("width", diameter)
     .attr("height", diameter)
     .attr("class", "bubble");
+
 
 var nodes = d3.hierarchy(dataset)
     .sum(function(d) { return d.responseCount; });
@@ -58,8 +66,9 @@ node.append("circle")
         return d.r;
     })
     .style("fill", function(d) {
-        return colorb(d.responseCount);
-    });
+        return colorb(d.data.color);
+    })
+    .attr("fill", "#a9592a");
 
 node.append("text")
     .attr("dy", ".3em")
@@ -72,24 +81,32 @@ d3.select(self.frameElement)
     .style("height", diameter + "px");
 
 dataset2 = {
-    "children": [{
-        "facilityId": "Completely agree",
-        "responseCount": 26
-    }, {
-        "facilityId": "Somewhat agree",
-        "responseCount": 46
-    }, {
-        "facilityId": "Somewhat disagree",
-        "responseCount": 11
-    }, {
-        "facilityId": "Completely disagree",
-        "responseCount":3
-    }, {
-        "facilityId": "Don't know",
-        "responseCount": 14
-    }
+    "children": [
+        {
+            "facilityId": "Somewhat agree",
+            "responseCount": 46,
+            "color": 5
+        },  {
+            "facilityId": "Completely agree",
+            "responseCount": 26,
+            "color": 5
+        },  {
+            "facilityId": "Don't know",
+            "responseCount": 14,
+            "color": 6
+        },  {
+            "facilityId": "Somewhat disagree",
+            "responseCount": 3,
+            "color": 7
+        }, {
+            "facilityId": "Completely disagree",
+            "responseCount":3,
+            "color": 7
+        }
     ]
 };
+
+
 var svg2 = d3.select("#visualization1c")
     .append("svg")
     .attr("width", diameter)
@@ -121,7 +138,7 @@ node2.append("circle")
         return d.r;
     })
     .style("fill", function(d) {
-        return colorb(d.responseCount);
+        return colorb(d.data.color);
     });
 
 node2.append("text")

@@ -92,12 +92,12 @@ function loadData() {
         //     return d.daydream;
         // })]);
 
-        y.domain([100, 120]);
+        y.domain([750, 820]);
 
 
         var valueline = d3.line()
             .x(function (d) {return x(+d.date1);})
-            .y(function (d) {return y(+d.oculus);})
+            .y(function (d) {return y(+d.daydream);})
             .curve(d3.curveMonotoneX);
 
         var lineSvg = svg3.append("g");
@@ -114,7 +114,7 @@ function loadData() {
             .attr("class", "xaxis axis axis-date")
             .attr("transform", "translate(0," + height3 + ")")
             .call(xAxis);
-
+        //
         d3.selectAll(".axis-date .tick text")
             .attr("transform", "translate(-15,20) rotate(-90)");
 
