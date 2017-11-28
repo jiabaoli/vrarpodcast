@@ -252,7 +252,8 @@ var chart = function() {
             .attr("x2", function(p) { return p.x; })
             .attr("y2", function(p) { return p.y; });
 
-        d3.select("#word").html(d.visual);
+        d3.select("#word")
+            .html(d.visual);
 
         if( !d.sentences ) {
             d.sentences = getSentencesWith(d.key);
