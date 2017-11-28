@@ -1,29 +1,17 @@
 // setup canvas3
-var margin3 = {top: 40, right: 40, bottom: 60, left: 60};
+var margin4 = {top: 40, right:40, bottom: 40, left: 40};
 
-var width3 = 400 - margin3.left - margin3.right,
-    height3 = 400 - margin3.top - margin3.bottom;
-
-
-var svg4 = d3.select("#chart-area22").append("svg")
-    .attr("width", width3 + margin3.left + margin3.right)
-    .attr("height", height3 + margin3.top + margin3.bottom)
-    .append("g")
-    .attr("transform", "translate(" + margin3.left + "," + margin3.top + ")");
+var width4 = 350 - margin3.left - margin3.right,
+    height4 = 300 - margin3.top - margin3.bottom;
 
 
-// var svg4 = d3.select("#chart-area-stock-2").append("svg")
-//     .attr("width", width3 + margin3.left + margin3.right)
-//     .attr("height", height3 + margin3.top + margin3.bottom)
-//     .append("g")
-//     .attr("transform", "translate(" + margin3.left + "," + margin3.top + ")");
+var svg4 = d3.select("#temp-Chart2").append("svg")
+    // .attr("width", width4 + margin4.left + margin4.right)
+    // .attr("height", height4 + margin4.top + margin4.bottom)
+    .append("g");
+    // .attr("transform", "translate(" + margin4.left + "," + margin4.top + ")");
 
 
-var svg5 = d3.select("#chart-area-stock-3").append("svg")
-    .attr("width", width3 + margin3.left + margin3.right)
-    .attr("height", height3 + margin3.top + margin3.bottom)
-    .append("g")
-    .attr("transform", "translate(" + margin3.left + "," + margin3.top + ")");
 
 // Date parser
 var formatDate = d3.timeFormat("%Y");
@@ -52,7 +40,7 @@ function loadData() {
             dateForTooltip.push(d.date1);
             d.daydream = (+d.daydream);
             d.spectacles = (+d.spectacles);
-            // console.log(d.date);
+            console.log(d.spectacles);
             d.date1 = (d3.isoParse(d.date1));
 
             d.oculus = (+d.oculus);
@@ -69,77 +57,73 @@ function loadData() {
         });
 
 
+        var x1 = d3.scaleTime()
+            .range([0, width4]);
+        // .domain(d3.extend(data,function(d){return d.date;}));
 
-        // svg4.selectAll(".dot")
-        //     .data(data)
-        //     .enter().append("circle") // Uses the enter().append() method
-        //     .attr("class", "dot") // Assign a class for styling
-        //     .attr("cx", function(d) { return +d.date1 })
-        //     .attr("cy", function(d) { return d.spectacles })
-        //     .attr("r", 5);
+        var y1 = d3.scaleLinear()
+            .range([height4, 0]);
 
-///////////////////////////////////////////////////////////////////////
+        var xAxis1 = d3.axisBottom()
+            .scale(x1);
+        // .tickFormat(d3.time.format("%b %Y"))
 
-        // var x1 = d3.scaleTime()
-        //     .range([0, width3]);
-        // // .domain(d3.extend(data,function(d){return d.date;}));
-        // var y1 = d3.scaleLinear()
-        //     .range([height3, 0]);
-        //
-        // var xAxis1 = d3.axisBottom()
-        //     .scale(x1);
-        // // .tickFormat(d3.time.format("%b %Y"))
-        //
-        // var yAxis1 = d3.axisLeft()
-        //     .scale(y1);
-        //
-        //
-        // x1.domain(d3.extent(data, function (d) {
-        //     return d.date2;
-        // }));
-        //
-        // // y.domain([0, d3.max(data, function (d) {
-        // //     return d.daydream;
-        // // })]);
-        //
-        // y1.domain([100, 120]);
-        //
-        // var valueline2 = d3.line()
-        //     .x(function (d) {return x1(+d.date2);})
-        //     .y(function (d) {return y1(+d.oculus);});
-        //
-        // var lineSvg = svg4.append("g");
-        //
-        // svg4.append('g')
-        //     .attr('class', 'lineStock');
-        //
-        // svg4.select("g.lineStock")
-        //     .datum(data)
-        //     .append("path")
-        //     .attr("d", valueline2(data));
-        //
-        // svg4.append("g")
-        //     .attr("class", "xaxis axis axis-date")
-        //     .attr("transform", "translate(0," + height3 + ")")
-        //     .call(xAxis1);
-        //
-        // d3.selectAll(".axis-date .tick text")
-        //     .attr("transform", "translate(-15,20) rotate(-90)");
-        //
-        // // Y Axis
-        // svg4.append("g")
-        //     .attr("class", "y axis")
-        //     .call(yAxis1)
-        //     .append("text")
-        //     .attr("transform", "rotate(-90)")
-        //     .attr("y", 6)
-        //     .attr("dy", ".71em")
-        //     .style("text-anchor", "end")
-        //     .text("population");
-        //
+        var yAxis1 = d3.axisLeft()
+            .scale(y1);
 
 
-///////////////////////////////////////////////////////////////////////
+        x1.domain(d3.extent(data, function (d) {
+            return d.date1;
+        }));
+
+        // y.domain([0, d3.max(data, function (d) {
+        //     return d.daydream;
+        // })]);
+
+        y1.domain([50, 60]);
+
+
+        var valueline1 = d3.line()
+            .x(function (d) {return x1(+d.date1);})
+            .y(function (d) {return y1(+d.hololens);})
+            .curve(d3.curveMonotoneX);
+
+        var lineSvg = svg4.append("g");
+
+        svg4.append('g')
+            .attr('class', 'lineStock');
+
+        svg4.select("g.lineStock")
+            .datum(data)
+            .append("path")
+            .attr("d", valueline1(data));
+
+        svg4.append("g")
+            .attr("class", "xaxis axis axis-date")
+            .attr("transform", "translate(0," + height4 + ")")
+            .call(xAxis1);
+
+        d3.selectAll(".axis-date .tick text")
+            .attr("transform", "translate(-15,20) rotate(-90)");
+
+        // Y Axis
+        svg4.append("g")
+            .attr("class", "y axis")
+            .call(yAxis1)
+            .append("text")
+            .attr("transform", "rotate(-90)")
+            .attr("y", 6)
+            .attr("dy", ".71em")
+            .style("text-anchor", "end")
+            .text("population");
+
+// svg3.selectAll(".dot")
+//     .data(data)
+//     .enter().append("circle") // Uses the enter().append() method
+//     .attr("class", "dot") // Assign a class for styling
+//     .attr("cx", function(d) { return d.date1 })
+//     .attr("cy", function(d) { return d.daydream })
+//     .attr("r", 5);
 
 
     });
