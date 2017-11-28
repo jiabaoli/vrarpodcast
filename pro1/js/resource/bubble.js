@@ -28,8 +28,8 @@ dataset = {
     ]
 };
 
-var diameter = 400;
-var colorb = d3.scaleOrdinal(d3.schemeCategory20b);
+var diameter = 500;
+var colorb = d3.scaleOrdinal(d3.schemeCategory20c);
 
 var bubble = d3.pack(dataset)
     .size([diameter * 0.8, diameter * 0.8])

@@ -9,8 +9,8 @@
     {"name": "Transportation applications", "size": 0.05, "color":6},
     {"name": "Wearable devices", "size": 0.04, "color":6},
 
-    {"name": "Digital navigation tablets", "size": 0.03, "color":7},
-    {"name": "Holographic meetings", "size": 0.01, "color":7},
+    {"name": "Digital navigation tablets + Holographic meetings", "size": 0.04, "color":7},
+
     {"name": "Other", "size": 0, "color":7},
 
     {"name": "Unsure", "size": 0.14, "color":8},

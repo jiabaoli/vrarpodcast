@@ -839,6 +839,21 @@ form {
   stroke-width: 2px;
 }
 
+#visualization1 .node {
+  padding-top: 10px;
+  text-align: center;
+  font-size: 11px;
+  color: white;
+}
+
+#visualization2 .node {
+  text-align: center;
+  padding-top: 15px;
+  padding-right: 10px;
+  padding-left: 10px;
+  font-size: 11px;
+  color: black;
+}
 
 #visualization1 .node:hover {
   opacity: 0.7;
@@ -861,19 +876,6 @@ form {
   size: 5px;
 }
 
-#visualization1 .node {
-
-
-  background-color:white;
-  size: 4px;
-}
-
-#visualization2 .node {
-
-
-  background-color:white;
-  size: 4px;
-}
 
 .carousel-item {
   width: 900px;
