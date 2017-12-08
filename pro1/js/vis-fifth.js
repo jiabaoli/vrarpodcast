@@ -5,12 +5,11 @@ var width4 = 350 - margin3.left - margin3.right,
     height4 = 300 - margin3.top - margin3.bottom;
 
 
-var svg4 = d3.select("#temp-Chart2").append("svg")
+var svg5 = d3.select("#temp-Chart3").append("svg")
     .attr("width", width4 + margin4.left + margin4.right)
     .attr("height", height4 + margin4.top + margin4.bottom)
     .append("g")
     .attr("transform", "translate(" + margin4.left + "," + margin4.top + ")");
-
 
 
 // Date parser
@@ -80,25 +79,25 @@ function loadData() {
         //     return d.daydream;
         // })]);
 
-        y1.domain([50, 60]);
+        y1.domain([750, 820]);
 
 
         var valueline1 = d3.line()
             .x(function (d) {return x1(+d.date1);})
-            .y(function (d) {return y1(+d.hololens);})
+            .y(function (d) {return y1(+d.daydream);})
             .curve(d3.curveMonotoneX);
 
         var lineSvg = svg4.append("g");
 
-        svg4.append('g')
+        svg5.append('g')
             .attr('class', 'lineStock');
 
-        svg4.select("g.lineStock")
+        svg5.select("g.lineStock")
             .datum(data)
             .append("path")
             .attr("d", valueline1(data));
 
-        svg4.append("g")
+        svg5.append("g")
             .attr("class", "xaxis axis axis-date")
             .attr("transform", "translate(0," + height4 + ")")
             .call(xAxis1);
@@ -107,7 +106,7 @@ function loadData() {
             .attr("transform", "translate(-15,20) rotate(-90)");
 
         // Y Axis
-        svg4.append("g")
+        svg5.append("g")
             .attr("class", "y axis")
             .call(yAxis1)
             .append("text")

@@ -92,12 +92,12 @@ function loadData() {
         //     return d.daydream;
         // })]);
 
-        y.domain([750, 820]);
+        y.domain([100, 120]);
 
 
         var valueline = d3.line()
             .x(function (d) {return x(+d.date1);})
-            .y(function (d) {return y(+d.daydream);})
+            .y(function (d) {return y(+d.oculus);})
             .curve(d3.curveMonotoneX);
 
         var lineSvg = svg3.append("g");
