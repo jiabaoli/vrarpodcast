@@ -1,0 +1,19 @@
+{
+  "name": "organization",
+  "children": [
+    {"name": "My organization has not used augmented reality applications, and does not plans to", "size": 0.41, "color":5},
+    {"name": "Remote business applications", "size": 0.16, "color":5},
+    {"name": "Smartphone apps that overlay the camera view with additional information or graphics on top of the real scene", "size": 0.07, "color":5},
+
+    {"name": "My organization has not used augmented reality applications, but plans to", "size": 0.06, "color":6},
+    {"name": "Transportation applications", "size": 0.05, "color":6},
+    {"name": "Wearable devices", "size": 0.04, "color":6},
+
+    {"name": "Digital navigation tablets + Holographic meetings", "size": 0.04, "color":7},
+
+    {"name": "Other", "size": 0, "color":7},
+
+    {"name": "Unsure", "size": 0.14, "color":8},
+    {"name": "None of these", "size": 0.21, "color":8}
+  ]
+}
