@@ -87,9 +87,11 @@ var lineArea = d3.area()
 // -----------------------------------
 // Draw the axis
 var xAxis = d3.axisBottom().scale(x);
+
 var axisX = chart.append('g').attr('class', 'x axis')
     .attr('transform', 'translate(0, 500)')
     .call(xAxis);
+
 
 // // Draw the grid
 // chart.append('path').datum([{x: 0, y: 150}, {x: 500, y: 150}])
@@ -127,18 +129,29 @@ function tick() {
         y: vrArray[index]
     };
 
+
     data.push(point);
     globalX += step;
-    index += 1;
+
+    if (index < 400) {
+        index += 1;
+    }
+    else{
+        index = 0;
+    }
+
+
     // Draw new line
     path.datum(data)
         .attr('class', 'mysmoothline')
         .attr('d', smoothLine);
+
     // Draw new fill area
     areaPath.datum(data)
         .attr('class', 'myarea')
         .attr('d', lineArea);
-    // Shift the chart left
+    // Shift the chart
+
     x.domain([globalX - (max - step), globalX]);
 
     axisX.transition()
@@ -150,14 +163,16 @@ function tick() {
         .transition()
         .duration(duration)
         .ease(d3.easeLinear,2)
-        .attr('transform', 'translate(' + x(globalX - max) + ')')
+        .attr('transform', 'translate(' + x(globalX - max) + ')');
 
     areaPath.attr('transform', null)
         .transition()
         .duration(duration)
         .ease(d3.easeLinear,2)
         .attr('transform', 'translate(' + x(globalX - max) + ')')
-        .on('end', tick)
+        .on('end', tick);
+
+
     // Remote old data (max 50 points)
     if (data.length > 250) data.shift();
 }
