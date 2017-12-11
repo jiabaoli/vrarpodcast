@@ -27,6 +27,13 @@ form {
     text-indent: 2px;
 }
 
+
+.line {
+fill: none;
+stroke: #f1c40f;
+stroke-width: 3px;
+}
+
 .line1 {
     fill: none;
     stroke: #511416;
