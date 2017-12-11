@@ -1,0 +1,995 @@
+<!doctype html>
+<html lang="en">
+	
+<head>
+		<meta charset="utf-8" />
+
+		<title>VR/AR Podcast</title>
+
+		<!-- RD META -->
+		<meta name="HandheldFriendly" content="True">
+		<meta name="MobileOptimized" content="320">
+		<meta name="viewport" content="initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+		<!-- ICONS -->
+		<link rel="shortcut icon" href="assets/icons/favicon_icon.ico">
+		<link rel="icon" type="image/png" href="assets/icons/favicon-16x16.png" sizes="16x16">
+		<link rel="icon" type="image/png" href="assets/icons/favicon-32x32.png" sizes="32x32">
+		<link rel="icon" type="image/png" href="assets/icons/favicon-48x48.png" sizes="48x48">
+		<link rel="icon" type="image/png" href="assets/icons/favicon-96x96.png" sizes="96x96">
+
+		<link rel="apple-touch-icon" sizes="57x57" href="assets/icons/apple-touch-icon-57x57-precomposed.png">
+		<link rel="apple-touch-icon" sizes="114x114" href="assets/icons/apple-touch-icon-114x114-precomposed.png">
+		<link rel="apple-touch-icon" sizes="60x60" href="assets/icons/apple-touch-icon-60x60-precomposed.png">
+		<link rel="apple-touch-icon" sizes="120x120" href="assets/icons/apple-touch-icon-120x120-precomposed.png">
+		<link rel="apple-touch-icon" sizes="72x72" href="assets/icons/apple-touch-icon-72x72-precomposed.png">
+		<link rel="apple-touch-icon" sizes="144x144" href="assets/icons/apple-touch-icon-144x144-precomposed.png">
+		<link rel="apple-touch-icon" sizes="76x76" href="assets/icons/apple-touch-icon-76x76-precomposed.png">
+		<link rel="apple-touch-icon" sizes="152x152" href="assets/icons/apple-touch-icon-152x152-precomposed.png">
+
+		<!-- WEB FONTS -->
+		<link href='https://fonts.googleapis.com/css?family=Cousine:400,400italic,700,700italic%7COpen+Sans:300%7CAmatic+SC' rel='stylesheet' type='text/css'>
+
+		<!-- CUSTOM CSS -->
+		<link href="css/bootstrap.min.css" rel="stylesheet" />
+		<link href="css/style.css" rel="stylesheet" />
+		<link href="assets/css/style.css" rel="stylesheet" type="text/css" />
+		<link href="assets/css/custom.css" rel="stylesheet" type="text/css" />
+
+		<style>
+						.svg-letter-1 image {
+			    -webkit-mask: url(#letter-1-mask);
+			    -moz-mask: url(#letter-1-mask);
+			    mask: url(#letter-1-mask);
+			}
+						.svg-letter-2 image {
+			    -webkit-mask: url(#letter-2-mask);
+			    -moz-mask: url(#letter-2-mask);
+			    mask: url(#letter-2-mask);
+			}
+						.svg-letter-3 image {
+			    -webkit-mask: url(#letter-3-mask);
+			    -moz-mask: url(#letter-3-mask);
+			    mask: url(#letter-3-mask);
+			}
+						.svg-letter-4 image {
+			    -webkit-mask: url(#letter-4-mask);
+			    -moz-mask: url(#letter-4-mask);
+			    mask: url(#letter-4-mask);
+			}
+						.svg-letter-5 image {
+			    -webkit-mask: url(#letter-5-mask);
+			    -moz-mask: url(#letter-5-mask);
+			    mask: url(#letter-5-mask);
+			}
+						.svg-letter-6 image {
+			    -webkit-mask: url(#letter-6-mask);
+			    -moz-mask: url(#letter-6-mask);
+			    mask: url(#letter-6-mask);
+			}
+						.svg-letter-7 image {
+			    -webkit-mask: url(#letter-7-mask);
+			    -moz-mask: url(#letter-7-mask);
+			    mask: url(#letter-7-mask);
+			}
+						.svg-letter-8 image {
+			    -webkit-mask: url(#letter-8-mask);
+			    -moz-mask: url(#letter-8-mask);
+			    mask: url(#letter-8-mask);
+			}
+						.svg-letter-9 image {
+			    -webkit-mask: url(#letter-9-mask);
+			    -moz-mask: url(#letter-9-mask);
+			    mask: url(#letter-9-mask);
+			}
+		.aframebox {
+height: 800px;
+width: 100%;
+}
+
+					</style>
+
+
+	<script src="js/aframe-master.js"></script>
+	<script src="js/aframe-v0.7.1.js"></script>
+	<script src="js/util.js"></script>
+	<script src="js/components.js"></script>
+	<script src="js/cube.js"></script>
+
+	<script type="text/javascript" src="http://mbostock.github.com/d3/d3.js"></script>
+	</head>
+
+	<body class="scroll-blocked">
+
+		<div class="global-loader">
+			<div class="va-outer">
+				<div class="va-inner">
+					<div class="image">
+						<img src="assets/img/site-loading.gif" alt="" width="186" height="160" />
+					</div>
+					<div class="text">
+						At least the loading time is not as long as Hanspeter's sabbatical.
+					</div>
+				</div><!-- .va-inner -->
+			</div><!-- .va-outer -->
+		</div><!-- .global-loader -->
+
+		<div class="global-container">
+ <div>
+    <a-scene class="aframebox" main embedded></a-scene>
+</div>
+	<section class="site-section section-intro fullscreen">
+		<div class="section-body">
+			<h2 class="section-title scroll-parallax" data-level="5">
+				<span class="word">VR/AR</span>
+				<span class="word">PodCast</span>
+				<!--<span class="word">Writing Tool.</span>-->
+
+				<span class="rects">
+					<span class="rect scroll-parallax" data-level="0.5"></span>
+					<span class="rect scroll-parallax" data-level="1"></span>
+				</span>
+			</h2>
+
+			<div class="section-content rte scroll-parallax" data-level="4">
+				<p>
+					Past | Present | <br/>
+					Future
+				</p>
+
+				<div class="line-bottom"></div>
+			</div><!-- .section-content -->
+		</div><!-- .section-body -->
+
+		<div class="section-background scroll-parallax" data-level="0.5">
+			<div class="product-container">
+				<img src="assets/img/product.png" alt="" width="1214" height="880" class="product-image" />
+
+				<video class="product-video" width="1128" height="818" mute preload autoplay>
+					<source src="assets/video/product1bce.mp4?v=6" type="video/mp4" />
+					<source src="assets/video/product1bce.webm?v=6" type="video/webm" />
+					<source src="assets/video/product1bce.ogg?v=6" type="video/ogv" />
+				</video>
+
+				<div class="infos">
+					<div class="info info-1">
+						<div class="button"></div>
+
+						<div class="content">
+							<div class="content-inner">
+								<div class="content-text">
+									<div class="info-title">
+										Past
+									</div>
+VR/AR is considered to have begun in the 1950’s but early elements of it can be traced back to the 1860’s and long before the development of digital technology.
+								</div><!-- .content-text -->
+							</div><!-- .content-inner -->
+							<div class="background"></div>
+
+							<div class="content-line"></div>
+						</div><!-- .content -->
+
+						<div class="line"></div>
+					</div><!-- .info -->
+
+					<div class="info info-2">
+						<div class="button"></div>
+
+						<div class="content">
+							<div class="content-inner">
+								<div class="content-text">
+									<div class="info-title">
+										Present
+									</div>
+“We want to break the mold of having VR/AR experiences that are nauseating and awesome or comfortable and boring,” Oates says. “And instead make games everybody can play and play at their own pace.”
+								</div><!-- .content-text -->
+							</div><!-- .content-inner -->
+							<div class="background"></div>
+
+							<div class="content-line"></div>
+						</div><!-- .content -->
+
+						<div class="line"></div>
+					</div><!-- .info -->
+
+					<div class="info info-3">
+						<div class="button"></div>
+
+						<div class="content">
+							<div class="content-inner">
+								<div class="content-text">
+									<div class="info-title">
+										Podcast
+									</div>
+Mark Zuckerberg said that his goal is to get one billion people into virtual reality.
+								</div><!-- .content-text -->
+							</div><!-- .content-inner -->
+							<div class="background"></div>
+
+							<div class="content-line"></div>
+						</div><!-- .content -->
+
+						<div class="line"></div>
+					</div><!-- .info -->
+				</div><!-- .infos -->
+			</div><!-- .product-container -->
+		</div><!-- .section-background -->
+
+	</section><!-- .section-intro -->
+
+			<!-- .section-iframe -->
+			<section class="site-section section-intro fullscreen" id="timeframe">
+				<iframe src='https://cdn.knightlab.com/libs/timeline3/latest/embed/index.html?source=1kYW88ZM4v4OIJv9ikGNYa8iCpTZ0OeCjgbMPG8ZivR0&font=Default&lang=en&initial_zoom=2&height=650' width='100%' height=650 webkitallowfullscreen mozallowfullscreen allowfullscreen frameborder='0'></iframe>
+			</section>
+
+			<section class="site-section section-free fullscreen">
+				<div class="section-body scroll-parallax" data-level="1">
+					<div class="body-inner">
+						<h2 class="section-title scroll-parallax" data-level="1">
+							<span class="title-inner">Introduction</span>
+							<span class="line"></span>
+						</h2>
+
+						<div class="section-content rte scroll-parallax" data-level="1">
+							<p>
+								With groundbreaking technology development over the recent years, virtual reality and
+								augmented reality have gained substantial social attention and acquired tremendous
+								capital investment. In 2016, multiple consumer-end devices have been released by major companies,
+								including Oculus Rift, HTC Vive, Google Day Dream and Microsoft Hololens.
+								Market trend estimated an AR/VR market size of 215 billion U.S. Dollars by year 2021.
+							</p>
+						</div><!-- .section-content -->
+
+					</div><!-- .body-inner -->
+
+					<div class="layers">
+						<div class="layer"></div>
+						<div class="layer"></div>
+						<div class="layer"></div>
+					</div><!-- .layers -->
+				</div><!-- .section-body -->
+
+				<div class="section-background scroll-parallax" data-level="-2">
+					<div class="top-mask"></div>
+					<div class="illustration-container">
+						<img src="data:image/gif;base64,R0lGODdhAQABAPAAAP///wAAACwAAAAAAQABAEACAkQBADs=" data-src="assets/img/illus/free-man.png" alt="" width="2560" height="1408" class="illustration man queue-loading rwd" />
+						<img src="data:image/gif;base64,R0lGODdhAQABAPAAAP///wAAACwAAAAAAQABAEACAkQBADs=" data-src="assets/img/illus/free-man-head.png" alt="" width="2560" height="1408" class="illustration man head queue-loading rwd" />
+						<img src="data:image/gif;base64,R0lGODdhAQABAPAAAP///wAAACwAAAAAAQABAEACAkQBADs=" data-src="assets/img/illus/free-eyes.gif" alt="" width="549" height="185" class="illustration eyes queue-loading gif" />
+						<img src="data:image/gif;base64,R0lGODdhAQABAPAAAP///wAAACwAAAAAAQABAEACAkQBADs=" data-src="assets/img/illus/free-mouth.gif" alt="" width="353" height="197" class="illustration mouth queue-loading gif" />
+
+						<div class="clouds-container">
+							<div class="cloud">
+								<img src="data:image/gif;base64,R0lGODdhAQABAPAAAP///wAAACwAAAAAAQABAEACAkQBADs=" data-src="assets/img/illus/free-cloud.png" alt="" width="1199" height="440" class="queue-loading rwd" />
+
+								<div class="word-container">
+									<div class="va-outer">
+										<div class="va-inner">
+											<div class="word"></div>
+										</div><!-- .va-inner -->
+									</div><!-- .va-outer -->
+								</div><!-- .word-container -->
+							</div><!-- .cloud -->
+						</div><!-- .clouds-container -->
+					</div><!-- .illustration-container -->
+				</div><!-- .section-background -->
+			</section><!-- .section-intro -->
+
+			<section class="site-section section-intro fullscreen">
+			<div>
+				<h2>TechCrunch Posts</h2>
+				<p>A word cloud of the new hyperreality : HoloLens, Immersive, IPO....</p>
+			</div>
+			<div id="word"></div>
+			<div id="vis"></div>
+
+			</section>
+
+<section class="site-section section-free fullscreen">
+				<div class="section-body scroll-parallax" data-level="1">
+					<div class="body-inner">
+						<h2 class="section-title scroll-parallax" data-level="1">
+							<span class="title-inner">Overview of the past</span>
+							<span class="line"></span>
+						</h2>
+
+						<div class="section-content rte scroll-parallax" data-level="1">
+							<p>
+								Even though AR/VR sounds novel to most people, the technology itself is actually
+								not a new concept in human history. In 1960, Morton Heilig invented the first VR head
+								mounted, entitled ‘Telesphere Mask’. In 1987, the term ‘virtual reality’ was coined by Jaron Lanier.
+								In 1990s, various tech companies worked on virtual reality products such as VR glasses by SEGA
+								(1993), Nintendo Virtual Boy (1995) and the Matrix (1999).
+							</p>
+						</div><!-- .section-content -->
+
+					</div><!-- .body-inner -->
+
+					<div class="layers">
+						<div class="layer"></div>
+						<div class="layer"></div>
+						<div class="layer"></div>
+					</div><!-- .layers -->
+				</div><!-- .section-body -->
+
+				<div class="section-background scroll-parallax" data-level="-2">
+					<div class="top-mask"></div>
+					<div class="illustration-container">
+						<img src="data:image/gif;base64,R0lGODdhAQABAPAAAP///wAAACwAAAAAAQABAEACAkQBADs=" data-src="assets/img/illus/surprise.png" alt="" width="2560" height="1408" class="illustration man queue-loading rwd" />
+						
+					</div><!-- .illustration-container -->
+				</div><!-- .section-background -->
+			</section><!-- .section-intro -->
+
+
+			<section class="site-section section-intro fullscreen">
+
+				<h2>GoogleTrends</h2>
+				<!-- Parent container for the scatterplot -->
+				<!--<h2>GoogleTrend</h2>-->
+				<div class="row">
+					<div class="col-sm-6">
+						<h2>VR search history</h2>
+						<p>Google Trend</p>
+						<!--<svg id="chart"></svg>-->
+						<svg    width="50%" height="50%" id="Googlechart"></svg>
+						<!--<div id="radar"></div>-->
+
+					</div>
+
+					<div class="col-sm-6">
+						<h2>AR search history</h2>
+						<p>Google Trend</p>
+						<!--<svg id="chart02"></svg>-->
+						<svg    width="50%" height="50%" id="Googlechart02"></svg>
+						<!--<div id="radar_02"></div>-->
+					</div>
+					<!--<div class="col-sm-4">.col-sm-4</div>-->
+				</div>
+
+
+			<div class="row">
+				<h2>Search history by Region</h2>
+				<div class="col-sm-6">
+
+					<!--<svg id="chart"></svg>-->
+					<div id="radar"></div>
+
+				</div>
+
+
+				<div class="col-sm-6">
+
+
+					<div id="radar_02"></div>
+				</div>
+
+				<!--<div class="col-sm-4">.col-sm-4</div>-->
+			</div>
+
+
+
+		</section>
+
+
+
+
+			<section class="site-section section-free fullscreen">
+				<div class="section-body scroll-parallax" data-level="1">
+					<div class="body-inner">
+						<h2 class="section-title scroll-parallax" data-level="1">
+							<span class="title-inner">Google Trend</span>
+							<span class="line"></span>
+						</h2>
+
+						<div class="section-content rte scroll-parallax" data-level="1">
+							<p>According to Google trend, the interest in VR peaked during late 2016 and early 2017. On average, VR has received more social attention than AR.  South Korea, Hong Kong and Taiwan are among the top countries that have expressed interest in VR technologies over the past five years. According to TechCrunch posts, mobile AR could become the primary driver of a $108 billion VR/AR market by year 2021. The most frequently used words in AR/VR include Hololens, Facebook, Samsung, headset, gear, augmented, mobile and etc.</p>
+						</div><!-- .section-content -->
+
+					</div><!-- .body-inner -->
+
+					<div class="layers">
+						<div class="layer"></div>
+						<div class="layer"></div>
+						<div class="layer"></div>
+					</div><!-- .layers -->
+				</div><!-- .section-body -->
+
+				<div class="section-background scroll-parallax" data-level="-2">
+					<div class="top-mask"></div>
+					<div class="illustration-container">
+						<img src="data:image/gif;base64,R0lGODdhAQABAPAAAP///wAAACwAAAAAAQABAEACAkQBADs=" data-src="assets/img/illus/trend.png" alt="" width="2560" height="1408" class="illustration man queue-loading rwd" />
+					</div><!-- .illustration-container -->
+				</div><!-- .section-background -->
+			</section><!-- .section-free -->
+
+			<section class="site-section section-intro fullscreen">
+				<div class="container">
+					<div class="row">
+						<div class="col-sm-12">
+							<div class="section-heading pb-55 text-center">
+								<h2>Stock</h2>
+
+								<p>Lorem Ipsum is slechts een proeftekst uit het drukkerij- en zetterijwezen. Lorem Ipsum is de standaard proeftekst in deze bedrijfstak sinds.</p>
+							</div>
+							<div id="chart-area-stock"></div>
+
+							<h2>Zoomed in trends</h2>
+							<div class="row">
+								<div class="col-md-4">
+									<div class="thumbnail" id="temp-Chart">
+										<!--<img src="img/oculus.PNG" alt="Oculus" style="width:100%;height: 300px ">-->
+										<div class="caption">
+											"Oculus stock data reveals negative trends."
+										</div>
+									</div>
+								</div>
+								<div class="col-md-4">
+									<div class="thumbnail" id="temp-Chart2">
+										<!--<img src="img/hololens.PNG" alt="Hololens" style="width:100% ;height: 300px">-->
+										<div class="caption">
+											"Hololens stock data reveals positive trends."
+										</div>
+									</div>
+								</div>
+								<div class="col-md-4">
+									<div class="thumbnail" id="temp-Chart3">
+										<!--<img src="img/daydream.PNG" alt="Daydream" style="width:100% ;height: 300px">-->
+										<div class="caption">
+											"Daydream stock data reveals negative trends."
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+
+			<section class="site-section section-worry fullscreen">
+				<div class="section-body scroll-parallax" data-level="1">
+					<h2 class="section-title scroll-parallax" data-level="1">
+						<span class="title-inner">Stock</span>
+						<span class="line"></span>
+					</h2>
+
+					<div class="section-content rte scroll-parallax" data-level="1">
+						<p>When most tech companies release VR/AR products, their stock prices go down.
+							The major conjecture behind the phenomenon is that stakeholders still consider AR/VR products
+							as unstable and risky. Conservative investors prefer to invest in companies that focuses on
+							its core technology rather than being spread out on too many products.
+						</p>
+					</div><!-- .section-content -->
+					<div class="border"></div><!-- .border -->
+					<div class="body-mask"></div>
+				</div><!-- .section-body -->
+
+				<div class="section-background scroll-parallax" data-level="-2">
+					<div class="top-mask"></div>
+					<div class="illustration-container">
+						<img src="data:image/gif;base64,R0lGODdhAQABAPAAAP///wAAACwAAAAAAQABAEACAkQBADs=" data-src="assets/img/illus/worry-scene.png" alt="" width="2560" height="1656" class="illustration scene queue-loading rwd" />
+
+						<img src="data:image/gif;base64,R0lGODdhAQABAPAAAP///wAAACwAAAAAAQABAEACAkQBADs=" data-src="assets/img/illus/worry-cloud-small.png" alt="" width="5120" height="1656" class="illustration cloud small queue-loading rwd" />
+						<img src="data:image/gif;base64,R0lGODdhAQABAPAAAP///wAAACwAAAAAAQABAEACAkQBADs=" data-src="assets/img/illus/worry-cloud-medium.png" alt="" width="5120" height="1656" class="illustration cloud medium queue-loading rwd" />
+						<img src="data:image/gif;base64,R0lGODdhAQABAPAAAP///wAAACwAAAAAAQABAEACAkQBADs=" data-src="assets/img/illus/worry-cloud-big.png" alt="" width="5120" height="1656" class="illustration cloud big queue-loading rwd" />
+
+						<img src="data:image/gif;base64,R0lGODdhAQABAPAAAP///wAAACwAAAAAAQABAEACAkQBADs=" data-src="assets/img/illus/worry-hand.png" alt="" width="87" height="60" class="illustration skeleton-hand queue-loading rwd" />
+
+						<img src="data:image/gif;base64,R0lGODdhAQABAPAAAP///wAAACwAAAAAAQABAEACAkQBADs=" data-src="assets/img/illus/worry-screen.png" alt="" width="48" height="46" class="illustration screen queue-loading rwd" />
+
+						<img src="data:image/gif;base64,R0lGODdhAQABAPAAAP///wAAACwAAAAAAQABAEACAkQBADs=" data-src="assets/img/illus/worry-hand.gif" alt="" width="203" height="200" class="illustration hand queue-loading gif" />
+					</div><!-- .illustration-container -->
+				</div><!-- .section-background -->
+			</section><!-- .section-worry -->
+
+			<section class="screenshot-area pt-130 pb-130">
+				<div class="container">
+
+					<div id="carouselExampleControls" class="carousel slide col-md-12" data-ride="carousel" >
+						<div class="carousel-inner">
+							<div class="carousel-item active col-md-12" id="visualization1">
+
+								<h2>Augmented reality by industry</h2>
+								<p>According to our dataset, the entertainment, education and media industry will benefit the most from the augmented reality technology.</p>
+
+							</div>
+
+							<div class="carousel-item col-md-12" id="visualization2">
+
+								<h2>Share of augmented reality applications used by organizations in the UK 2016</h2>
+								<p>According to a recent survey, most organizations still have not used augmented reality but many of them are planning to in the near future.</p>
+
+							</div>
+
+						</div>
+						<a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
+						<span class="carousel-control-prev-icon" aria-hidden="true"></span>
+						<span class="sr-only">Previous</span>
+						</a>
+						<a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
+						<span class="carousel-control-next-icon" aria-hidden="true"></span>
+						<span class="sr-only">Next</span>
+						</a>
+					</div>
+
+					&nbsp
+					&nbsp
+
+					<div class="col-md-12">
+						<div class="col-md-6">
+							<h2>Virtual reality: interest in experiencing tourism via VR Great Britain 2016, by age</h2>
+							<p>The elderly population are interested in experiencing tourism through virtual reality in the UK.
+							</p>
+						</div>
+
+						<div class="col-md-6">
+							<h2>Augmented reality: creating better marketing in Europe 2016</h2>
+							<p>Most people agree that augmented reality will benefit the workplace.</p>
+						</div>
+					</div>
+
+
+
+					<div class="col-md-12">
+						<div class="col-md-6" id="visualization1a"></div>
+						<div class="col-md-6" id="visualization1c"></div>
+					</div>
+
+					<div class="col-md-12">
+						<div class="col-md-6">
+							<h2>Global VR headset shipments by brand</h2>
+							<p>The most popular VR headset in 2016 is Samsung Gear VR.</p>
+						</div>
+
+						<div class="col-md-6">
+							<h2>Global shipments of AR/VR devices</h2>
+							<p>By 2020, more then 60% of those who are tech savvy will be using augmented reality technology. </p>
+						</div>
+					</div>
+
+					<div class="col-md-12">
+						<div class="col-md-6" id="visualization1b"></div>
+						<div class="col-md-6" id="visualization1e"></div>
+					</div>
+				</div>
+		</section>
+
+	<section class="site-section section-escapism fullscreen">
+				<div class="section-body scroll-parallax" data-level="1">
+					<h2 class="section-title scroll-parallax" data-level="1">
+						<span class="title-inner">What's Your Insight?</span>
+						<span class="line"></span>
+					</h2>
+
+					<div class="section-content rte scroll-parallax" data-level="1">
+						<p>What do you think the future of AR/VR would be? Share with us a drawing of your vision below.</p>
+					</div><!-- .section-content -->
+
+					<div class="border"></div><!-- .border -->
+
+					<div class="body-mask"></div>
+				</div><!-- .section-body -->
+
+				<div class="section-background scroll-parallax" data-level="-2">
+					<div class="top-mask"></div>
+					<div class="illustration-container">
+						<img src="data:image/gif;base64,R0lGODdhAQABAPAAAP///wAAACwAAAAAAQABAEACAkQBADs=" data-src="assets/img/illus/escapism-ground.png" alt="" width="2560" height="921" class="illustration ground queue-loading rwd" />
+						<img src="data:image/gif;base64,R0lGODdhAQABAPAAAP///wAAACwAAAAAAQABAEACAkQBADs=" data-src="assets/img/illus/escapism-city.png" alt="" width="2560" height="921" class="illustration city scroll-parallax queue-loading rwd" data-level="-0.5" />
+						<img src="data:image/gif;base64,R0lGODdhAQABAPAAAP///wAAACwAAAAAAQABAEACAkQBADs=" data-src="assets/img/illus/escapism-man.png" alt="" width="782" height="1035" class="illustration man queue-loading rwd" />
+						<img src="data:image/gif;base64,R0lGODdhAQABAPAAAP///wAAACwAAAAAAQABAEACAkQBADs=" data-src="assets/img/illus/escapism-fingers.gif" alt="" width="395" height="160" class="illustration fingers queue-loading gif" />
+
+						<div class="typography-container">
+							<div class="letter-container">
+								<div class="svg-container">
+							<span class="svg svg-letter-f svg-letter-1"><svg version="1.1" id="letter-1-masks" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 width="1000px" height="1000px" viewBox="0 0 1000 1000" enable-background="new 0 0 1000 1000" xml:space="preserve">
+  <!--<defs>-->
+    <mask id="letter-1-mask" x="0" y="0" width="100%" height="100%" >
+		<rect x="0" y="0" width="100%" height="100%"/>
+		<path id="letter-1-mask-1" d="M365.5,850.5h28h53v30h-65h-34h-47v-30h265.5z"/>
+		<path id="letter-1-mask-2" d="M384.5,775.167l18.667,1.333l74,14.667L466.5,880.5h-65h-34h-47l6.667-89.333L384.5,775.167z"/>
+		<path id="letter-1-mask-3" d="M373.833,705.833l26-28.667l38,30.667l64,88.667l1.333,84.667L299.833,878.5l-32.333-112l99.667,13.333
+			L373.833,705.833z"/>
+		<path id="letter-1-mask-4" d="M373.167,505.833l32.667-34l38.667,76l28.667,72.667l30,260.667L299.833,878.5l-20-210.667l91.048,28.624
+			L373.167,505.833z"/>
+		<path id="letter-1-mask-5" d="M381.833,344.5l26.667-23.333l42,22l38.667,196l14,342L299.833,878.5l-20-210.667l86.667-68.667L381.833,344.5
+			z"/>
+		<path id="letter-1-mask-6" d="M381.968,326.505l3.199-91.338l54.756,81.333l113.244,180l-50,384.667L299.833,878.5L275.5,436.833
+			L379.167,392.5L381.968,326.505z"/>
+		<path id="letter-1-mask-7" d="M321.833,230.5l130.073,4.073L498.5,316.5l165.333,168L503.167,881.167L299.833,878.5L275.5,436.833
+			l34.333-147L321.833,230.5z"/>
+		<path id="letter-1-mask-8" d="M345.833,133.833l280,80.667l-27.333,98l65.333,172L503.167,881.167L299.833,878.5L275.5,436.833
+			L267.167,130.5L345.833,133.833z"/>
+		<path id="letter-1-mask-9" d="M345.833,133.833L740.5,212.5l-44.667,98.667l-32,173.333L503.167,881.167L299.833,878.5L275.5,436.833
+			L267.167,130.5L345.833,133.833z"/>
+    </mask>
+  </defs>
+   <image xlink:href="assets/img/illus/letter-f.png" x="0" y="0" height="1000px" width="1000px"/>
+</svg><span class="alt sr-only"></span></span>						</div>
+
+								<!--<img src="assets/img/illus/letter-f.png" alt="f" width="1000" height="1000" class="letter letter-1">-->
+							</div>
+							<div class="letter-container">
+								<div class="svg-container">
+							<span class="svg svg-letter-r svg-letter-2"><svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="1000px"
+	 height="1000px" viewBox="0 0 1000 1000" enable-background="new 0 0 1000 1000" xml:space="preserve">
+  <defs>
+    <mask id="letter-2-mask" x="0" y="0" width="100%" height="100%" >
+      <rect x="0" y="0" width="100%" height="100%"/>
+	<path id="letter-2-mask-1_1_" fill="#231F20" d="M209.25,842.5H253l25,1.25h260l33.75-3.75l55,1.25H558l13.75-1.25l183.75-6.25h21.25h20
+		h23.75v80h-695L209.25,842.5z"/>
+	<path id="letter-2-mask-2" fill="#231F20" d="M153,769l133-9l40,1l84-23l22.479,37.132L488,774l40-10l29-47l155-27l12.377,27.479
+		l12.512,20.101L822,736l8.5,177.75h-695L153,769z"/>
+	<path id="letter-2-mask-3" fill="#231F20" d="M175,645h85.53L331,626l81-43l18,13l29,9l45,48l48-1l57-114l20,17l16.564,28.031L822,574
+		l8.5,339.75h-695L175,645z"/>
+	<path id="letter-2-mask-4" fill="#231F20" d="M175,519.667L254.333,519L309,515l104-8l2,17.333l1.333,17.333l20.667-18l38.667,18.667
+		l10-74.667l20.487,12.483L537,495l285,79l8.5,339.75h-695L175,519.667z"/>
+	<path id="letter-2-mask-5" fill="#231F20" d="M175,410.5l125.5-5l7.833-2.5L399,396.333L405.667,417l8,96v15.333L409,521.667l-2.345-92.805
+		l39.262,20.238L537,495l285,79l8.5,339.75h-695L175,410.5z"/>
+	<path id="letter-2-mask-6" fill="#231F20" d="M171.5,384l166,5.5l5-58.5l68.5,24.5l63.5,32.5l-40,129.5l-16-83l19.014-2l13.929-0.577
+		L513,437.5l45,49.5l264,87l8.5,339.75h-695L171.5,384z"/>
+	<path id="letter-2-mask-7" fill="#231F20" d="M173.5,300.5l87.03-3.5L334,271.5l70,22.5l6.5,11l7.5,11l14.5,12.5l38,9l40,9.5l65.5,24.5
+		l64.5-8L822,574l8.5,339.75h-695L173.5,300.5z"/>
+	<path id="letter-2-mask-8" fill="#231F20" d="M173.5,189.5l87.03,19.5l53.97,24.5L364,230l13.794,22.248l8.006,12.694L404,294l37.5-6l40-4.5
+		l48-3l111-35.5l183.167-6.667L830.5,913.75h-695L173.5,189.5z"/>
+	<path id="letter-2-mask-9" fill="#231F20" d="M173.5,189.5L236,133l17.5-6l63,4.5l46.554,91.711L368,234.5l15.762,26.051L404,294l45.5-10.5
+		L486,269l25-87.5l312.667,56.833L830.5,913.75h-695L173.5,189.5z"/>
+	<path id="letter-2-mask-10" fill="#231F20" d="M173.5,189.5L236,133l17.5-6l63,4.5l46.554,91.711L368,234.5l15.762,26.051L404,294l-49,16
+		l-29-74.5l76-16.5l416.5-115.5l12,810.25h-695L173.5,189.5z"/>
+	<path id="letter-2-mask-11" fill="#231F20" d="M173.5,189.5L236,133l17.5-6l63,4.5l46.554,91.711L368,234.5l15.762,26.051L404,294l-49,16
+		l-47.5-187.5l131,54l380-73l12,810.25h-695L173.5,189.5z"/>
+    </mask>
+  </defs>
+  <image xlink:href="assets/img/illus/letter-r.png" x="0" y="0" height="1000px" width="1000px"/>
+</svg><span class="alt sr-only"></span></span>						</div>
+
+								<!--<img src="assets/img/illus/letter-r.png" alt="r" width="1000" height="1000" class="letter letter-2">-->
+							</div>
+							<div class="letter-container">
+								<div class="svg-container">
+							<span class="svg svg-letter-e svg-letter-3"><svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="1000px"
+	 height="1000px" viewBox="0 0 1000 1000" enable-background="new 0 0 1000 1000" xml:space="preserve">
+  <defs>
+    <mask id="letter-3-mask" x="0" y="0" width="100%" height="100%" >
+      <rect x="0" y="0" width="100%" height="100%"/>
+	<path id="letter-3-mask-1" fill="#231F20" d="M217.667,805.667H257h25.527h282L503,822l8,20l13,10l256.576-24.926v106.495l-556.472-7.5
+		L217.667,805.667z"/>
+	<path id="letter-3-mask-2" fill="#231F20" d="M217.667,709l83.435,4L359,674l81,6l32,3l9,30l48,116l251.576-1.926v106.495l-556.472-7.5
+		L217.667,709z"/>
+	<path id="letter-3-mask-3" display="none" fill="#231F20" d="M217.667,573L358,646l14-71l66,16l6.008,16.258L599,710l17,102l164.576,15.074
+		v106.495l-556.472-7.5L217.667,573z"/>
+	<path id="letter-3-mask-4" display="none" fill="#231F20" d="M226,477l82,62l71-91l66-15l-0.552,96.991L550,601l230,18l0.576,208.074
+		v106.495l-556.472-7.5L226,477z"/>
+	<path id="letter-3-mask-5" display="none" fill="#231F20" d="M227,283l81,50l63,27l63-34l82,82l34,193l224-117l1.112,58.017l5.464,391.552
+		l-556.472-7.5L227,283z"/>
+	<path id="letter-3-mask-6" display="none" fill="#231F20" d="M227,220l117,25l59-35l46,73l207,87l26,114h92l1.112,58.017l5.464,391.552
+		l-556.472-7.5L227,220z"/>
+	<path id="letter-3-mask-7" display="none" fill="#231F20" d="M227,220l71-33l225-29.957L530,282l126,88l26,114h92l1.112,58.017
+		l5.464,391.552l-556.472-7.5L227,220z"/>
+	<path id="letter-3-mask-8" display="none" fill="#231F20" d="M227,220l48-91l350,20l4,130l76,24l64-8l5,189l1.112,58.017l5.464,391.552
+		l-556.472-7.5L227,220z"/>
+	<path id="letter-3-mask-9" display="none" fill="#231F20" d="M227,220l48-91l463,10l-12,121l-21,43l64-8l5,189l1.112,58.017l5.464,391.552
+		l-556.472-7.5L227,220z"/>
+    </mask>
+  </defs>
+  <image xlink:href="assets/img/illus/letter-e.png" x="0" y="0" height="1000px" width="1000px"/>
+</svg><span class="alt sr-only"></span></span>						</div>
+
+								<!--<img src="assets/img/illus/letter-e.png" alt="e" width="1000" height="1000" class="letter letter-3">-->
+							</div>
+							<div class="letter-container">
+								<div class="svg-container">
+							<span class="svg svg-letter-e svg-letter-4"><svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="1000px"
+	 height="1000px" viewBox="0 0 1000 1000" enable-background="new 0 0 1000 1000" xml:space="preserve">
+  <defs>
+    <mask id="letter-4-mask" x="0" y="0" width="100%" height="100%" >
+      <rect x="0" y="0" width="100%" height="100%"/>
+	<path id="letter-4-mask-1" fill="#231F20" d="M217.667,805.667H257h25.527h282L503,822l8,20l13,10l256.576-24.926v106.495l-556.472-7.5
+		L217.667,805.667z"/>
+	<path id="letter-4-mask-2" fill="#231F20" d="M217.667,709l83.435,4L359,674l81,6l32,3l9,30l48,116l251.576-1.926v106.495l-556.472-7.5
+		L217.667,709z"/>
+	<path id="letter-4-mask-3" display="none" fill="#231F20" d="M217.667,573L358,646l14-71l66,16l6.008,16.258L599,710l17,102l164.576,15.074
+		v106.495l-556.472-7.5L217.667,573z"/>
+	<path id="letter-4-mask-4" display="none" fill="#231F20" d="M226,477l82,62l71-91l66-15l-0.552,96.991L550,601l230,18l0.576,208.074
+		v106.495l-556.472-7.5L226,477z"/>
+	<path id="letter-4-mask-5" display="none" fill="#231F20" d="M227,283l81,50l63,27l63-34l82,82l34,193l224-117l1.112,58.017l5.464,391.552
+		l-556.472-7.5L227,283z"/>
+	<path id="letter-4-mask-6" display="none" fill="#231F20" d="M227,220l117,25l59-35l46,73l207,87l26,114h92l1.112,58.017l5.464,391.552
+		l-556.472-7.5L227,220z"/>
+	<path id="letter-4-mask-7" display="none" fill="#231F20" d="M227,220l71-33l225-29.957L530,282l126,88l26,114h92l1.112,58.017
+		l5.464,391.552l-556.472-7.5L227,220z"/>
+	<path id="letter-4-mask-8" display="none" fill="#231F20" d="M227,220l48-91l350,20l4,130l76,24l64-8l5,189l1.112,58.017l5.464,391.552
+		l-556.472-7.5L227,220z"/>
+	<path id="letter-4-mask-9" display="none" fill="#231F20" d="M227,220l48-91l463,10l-12,121l-21,43l64-8l5,189l1.112,58.017l5.464,391.552
+		l-556.472-7.5L227,220z"/>
+    </mask>
+  </defs>
+  <image xlink:href="assets/img/illus/letter-e.png" x="0" y="0" height="1000px" width="1000px"/>
+</svg><span class="alt sr-only"></span></span>						</div>
+
+								<!--<img src="assets/img/illus/letter-e.png" alt="e" width="1000" height="1000" class="letter letter-4">-->
+							</div>
+							<div class="letter-container">
+								<div class="svg-container">
+							<span class="svg svg-letter-w svg-letter-5"><svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="1000px"
+	 height="1000px" viewBox="0 0 1000 1000" enable-background="new 0 0 1000 1000" xml:space="preserve">
+  <defs>
+    <mask id="letter-5-mask" x="0" y="0" width="100%" height="100%" >
+      <rect x="0" y="0" width="100%" height="100%"/>	<path id="letter-5-mask-1" fill="#231F20" d="M196.377,831.459l228.571,11.243l25.974-5.195h87.013L640.532,844h26.364l163.636-12.541
+		l14.286,74.879l-662.338-7.792L196.377,831.459z"/>
+	<path id="letter-5-mask-2" fill="#231F20" d="M196.377,646.597l205.195,6.493l15.584,24.675l106.493,31.169l103.896-38.961l15.584-53.247
+		l142.857-10.39l68.831,300l-662.338-7.792L196.377,646.597z"/>
+	<path id="letter-5-mask-3" fill="#231F20" d="M208.065,484.26l193.507,19.481l25.974,44.156l96.104,48.052l87.013,1.299l28.571-75.325
+		l167.532-20.779l48.052,405.195l-662.338-7.792L208.065,484.26z"/>
+	<path id="letter-5-mask-4" fill="#231F20" d="M211.961,393.351l167.532-15.584l83.117,37.662l63.636,77.922l77.922,6.493l62.338-66.234
+		l159.74-35.065l28.571,507.792l-662.338-7.792L211.961,393.351z"/>
+	<path id="letter-5-mask-5" fill="#231F20" d="M202.87,297.247l153.247-29.87l112.987,83.117l75.325,12.987l57.143,10.39l88.312-79.221
+		l146.753,10.39l18.182,601.299l-662.338-7.792L202.87,297.247z"/>
+	<path id="letter-5-mask-6" fill="#231F20" d="M182.091,162.182l181.818,6.36l105.195,181.952l75.325,12.987l57.143,10.39L702.87,205.039
+		l132.468-12.987l19.481,714.286l-662.338-7.792L182.091,162.182z"/>
+    </mask>
+  </defs>
+  <image xlink:href="assets/img/illus/letter-w.png" x="0" y="0" height="1000px" width="1000px"/>
+</svg><span class="alt sr-only"></span></span>						</div>
+
+								<!--<img src="assets/img/illus/letter-w.png" alt="w" width="1000" height="1000" class="letter letter-5">-->
+							</div>
+							<div class="letter-container">
+								<div class="svg-container">
+							<span class="svg svg-letter-r svg-letter-6"><svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="1000px"
+	 height="1000px" viewBox="0 0 1000 1000" enable-background="new 0 0 1000 1000" xml:space="preserve">
+  <defs>
+    <mask id="letter-6-mask" x="0" y="0" width="100%" height="100%" >
+      <rect x="0" y="0" width="100%" height="100%"/>
+	<path id="letter-6-mask-1_1_" fill="#231F20" d="M209.25,842.5H253l25,1.25h260l33.75-3.75l55,1.25H558l13.75-1.25l183.75-6.25h21.25h20
+		h23.75v80h-695L209.25,842.5z"/>
+	<path id="letter-6-mask-2" fill="#231F20" d="M153,769l133-9l40,1l84-23l22.479,37.132L488,774l40-10l29-47l155-27l12.377,27.479
+		l12.512,20.101L822,736l8.5,177.75h-695L153,769z"/>
+	<path id="letter-6-mask-3" fill="#231F20" d="M175,645h85.53L331,626l81-43l18,13l29,9l45,48l48-1l57-114l20,17l16.564,28.031L822,574
+		l8.5,339.75h-695L175,645z"/>
+	<path id="letter-6-mask-4" fill="#231F20" d="M175,519.667L254.333,519L309,515l104-8l2,17.333l1.333,17.333l20.667-18l38.667,18.667
+		l10-74.667l20.487,12.483L537,495l285,79l8.5,339.75h-695L175,519.667z"/>
+	<path id="letter-6-mask-5" fill="#231F20" d="M175,410.5l125.5-5l7.833-2.5L399,396.333L405.667,417l8,96v15.333L409,521.667l-2.345-92.805
+		l39.262,20.238L537,495l285,79l8.5,339.75h-695L175,410.5z"/>
+	<path id="letter-6-mask-6" fill="#231F20" d="M171.5,384l166,5.5l5-58.5l68.5,24.5l63.5,32.5l-40,129.5l-16-83l19.014-2l13.929-0.577
+		L513,437.5l45,49.5l264,87l8.5,339.75h-695L171.5,384z"/>
+	<path id="letter-6-mask-7" fill="#231F20" d="M173.5,300.5l87.03-3.5L334,271.5l70,22.5l6.5,11l7.5,11l14.5,12.5l38,9l40,9.5l65.5,24.5
+		l64.5-8L822,574l8.5,339.75h-695L173.5,300.5z"/>
+	<path id="letter-6-mask-8" fill="#231F20" d="M173.5,189.5l87.03,19.5l53.97,24.5L364,230l13.794,22.248l8.006,12.694L404,294l37.5-6l40-4.5
+		l48-3l111-35.5l183.167-6.667L830.5,913.75h-695L173.5,189.5z"/>
+	<path id="letter-6-mask-9" fill="#231F20" d="M173.5,189.5L236,133l17.5-6l63,4.5l46.554,91.711L368,234.5l15.762,26.051L404,294l45.5-10.5
+		L486,269l25-87.5l312.667,56.833L830.5,913.75h-695L173.5,189.5z"/>
+	<path id="letter-6-mask-10" fill="#231F20" d="M173.5,189.5L236,133l17.5-6l63,4.5l46.554,91.711L368,234.5l15.762,26.051L404,294l-49,16
+		l-29-74.5l76-16.5l416.5-115.5l12,810.25h-695L173.5,189.5z"/>
+	<path id="letter-6-mask-11" fill="#231F20" d="M173.5,189.5L236,133l17.5-6l63,4.5l46.554,91.711L368,234.5l15.762,26.051L404,294l-49,16
+		l-47.5-187.5l131,54l380-73l12,810.25h-695L173.5,189.5z"/>
+    </mask>
+  </defs>
+  <image xlink:href="assets/img/illus/letter-r.png" x="0" y="0" height="1000px" width="1000px"/>
+</svg><span class="alt sr-only"></span></span>						</div>
+
+								<!--<img src="assets/img/illus/letter-r.png" alt="r" width="1000" height="1000" class="letter letter-6">-->
+							</div>
+							<div class="letter-container">
+								<div class="svg-container">
+							<span class="svg svg-letter-i svg-letter-7"><svg version="1.1" id="letter-7-Calque_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 width="1000px" height="1000px" viewBox="0 0 1000 1000" enable-background="new 0 0 1000 1000" xml:space="preserve">
+  <defs>
+    <mask id="letter-7-mask" x="0" y="0" width="100%" height="100%" >
+      <rect x="0" y="0" width="100%" height="100%"/><path id="letter-7-mask-1" fill="#231F20" d="M339.234,822.46l341.558-7.031v44.156l-349.351,9.091L339.234,822.46z"/>
+<path id="letter-7-mask-2" fill="#231F20" d="M369.104,627.117l261.039,20.779l50.649,211.688l-349.351,9.091L369.104,627.117z"/>
+<path id="letter-7-mask-3" fill="#231F20" d="M426.247,495.948l183.117-24.675l71.429,388.312l-349.351,9.091L426.247,495.948z"/>
+<path id="letter-7-mask-4" fill="#231F20" d="M439.234,382.961l167.532-11.688l74.026,488.312l-349.351,9.091L439.234,382.961z"/>
+<path id="letter-7-mask-5" fill="#231F20" d="M388.584,268.675l201.299,20.779l90.909,570.13l-349.351,9.091L388.584,268.675z"/>
+<path id="letter-7-mask-6" fill="#231F20" d="M382.091,177.54h210.39l88.312,682.044l-349.351,9.091L382.091,177.54z"/>
+    </mask>
+  </defs>
+  <image xlink:href="assets/img/illus/letter-i.png" x="0" y="0" height="1000px" width="1000px"/>
+</svg><span class="alt sr-only"></span></span>						</div>
+
+								<!--<img src="assets/img/illus/letter-i.png" alt="i" width="1000" height="1000" class="letter letter-7">-->
+							</div>
+							<div class="letter-container">
+								<div class="svg-container">
+							<span class="svg svg-letter-t svg-letter-8"><svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="1000px"
+	 height="1000px" viewBox="0 0 1000 1000" enable-background="new 0 0 1000 1000" xml:space="preserve">
+  <defs>
+    <mask id="letter-8-mask" x="0" y="0" width="100%" height="100%" >
+      <rect x="0" y="0" width="100%" height="100%"/>	<path id="letter-8-mask-1" fill="#231F20" d="M206.537,832.312l83.346-6.494h22.857H500h219.753h22.857h201.299l11.688,106.494H206.537
+		V832.312z"/>
+	<path id="letter-8-mask-2" fill="#231F20" d="M206.537,655.688l162.567-5.195l38.961-7.792l76.623,10.39l128.571,9.091l38.961,2.597
+		l74.026,5.195l49.351,262.338H206.537V655.688z"/>
+	<path id="letter-8-mask-3" fill="#231F20" d="M211.961,521.922l183.117-1.299l29.87-5.195h59.74l102.597,12.987l35.065,6.494l115.584-11.688
+		l37.662,409.091H206.537L211.961,521.922z"/>
+	<path id="letter-8-mask-4" fill="#231F20" d="M206.537,411.532l197.632,9.091l40.26-7.792l37.662,15.584l89.61,10.39l51.948,2.597
+		l114.286-12.987l37.662,503.896H206.537V411.532z"/>
+	<path id="letter-8-mask-5" fill="#231F20" d="M206.537,292.052l237.892,55.844l1.299-23.377l49.351-7.792l42.12,7.02l26.711-1.825
+		l205.195-28.571l6.494,638.961H206.537V292.052z"/>
+	<path id="letter-8-mask-6" fill="#231F20" d="M206.537,292.052l237.892,55.844v-62.338l59.74-79.221l58.442,83.117l1.299,32.468
+		l205.195-28.571l6.494,638.961H206.537V292.052z"/>
+	<path id="letter-8-mask-7" fill="#231F20" d="M206.537,292.052l153.476,11.688l28.571-25.974l20.779-77.922l209.091-3.896l6.494,90.909
+		l14.804,24.504l129.351-18.011l6.494,638.961H206.537V292.052z"/>
+	<path id="letter-8-mask-8" fill="#231F20" d="M206.537,292.052l78.152-1.299l40.26-3.896l20.779-102.597l379.445-40.289l-40.484,135.095
+		l35.065,10.39l49.351,3.896l6.494,638.961H206.537V292.052z"/>
+	<path id="letter-8-mask-9" fill="#231F20" d="M206.537,292.052l10.619-12.987l-16.883-6.493l-23.377-107.792l623.377-19.481l-28.571,122.078
+		l10.39,10.39l-12.987,15.584l6.494,638.961H206.537V292.052z"/>
+    </mask>
+  </defs>
+  <image xlink:href="assets/img/illus/letter-t.png" x="0" y="0" height="1000px" width="1000px"/>
+</svg><span class="alt sr-only"></span></span>						</div>
+
+								<!--<img src="assets/img/illus/letter-t.png" alt="t" width="1000" height="1000" class="letter letter-8">-->
+							</div>
+							<div class="letter-container">
+								<div class="svg-container">
+							<span class="svg svg-letter-e svg-letter-9"><svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="1000px"
+	 height="1000px" viewBox="0 0 1000 1000" enable-background="new 0 0 1000 1000" xml:space="preserve">
+  <defs>
+    <mask id="letter-9-mask" x="0" y="0" width="100%" height="100%" >
+      <rect x="0" y="0" width="100%" height="100%"/>
+	<path id="letter-9-mask-1" fill="#231F20" d="M217.667,805.667H257h25.527h282L503,822l8,20l13,10l256.576-24.926v106.495l-556.472-7.5
+		L217.667,805.667z"/>
+	<path id="letter-9-mask-2" fill="#231F20" d="M217.667,709l83.435,4L359,674l81,6l32,3l9,30l48,116l251.576-1.926v106.495l-556.472-7.5
+		L217.667,709z"/>
+	<path id="letter-9-mask-3" display="none" fill="#231F20" d="M217.667,573L358,646l14-71l66,16l6.008,16.258L599,710l17,102l164.576,15.074
+		v106.495l-556.472-7.5L217.667,573z"/>
+	<path id="letter-9-mask-4" display="none" fill="#231F20" d="M226,477l82,62l71-91l66-15l-0.552,96.991L550,601l230,18l0.576,208.074
+		v106.495l-556.472-7.5L226,477z"/>
+	<path id="letter-9-mask-5" display="none" fill="#231F20" d="M227,283l81,50l63,27l63-34l82,82l34,193l224-117l1.112,58.017l5.464,391.552
+		l-556.472-7.5L227,283z"/>
+	<path id="letter-9-mask-6" display="none" fill="#231F20" d="M227,220l117,25l59-35l46,73l207,87l26,114h92l1.112,58.017l5.464,391.552
+		l-556.472-7.5L227,220z"/>
+	<path id="letter-9-mask-7" display="none" fill="#231F20" d="M227,220l71-33l225-29.957L530,282l126,88l26,114h92l1.112,58.017
+		l5.464,391.552l-556.472-7.5L227,220z"/>
+	<path id="letter-9-mask-8" display="none" fill="#231F20" d="M227,220l48-91l350,20l4,130l76,24l64-8l5,189l1.112,58.017l5.464,391.552
+		l-556.472-7.5L227,220z"/>
+	<path id="letter-9-mask-9" display="none" fill="#231F20" d="M227,220l48-91l463,10l-12,121l-21,43l64-8l5,189l1.112,58.017l5.464,391.552
+		l-556.472-7.5L227,220z"/>
+    </mask>
+  </defs>
+  <image xlink:href="assets/img/illus/letter-e.png" x="0" y="0" height="1000px" width="1000px"/>
+</svg><span class="alt sr-only"></span></span>						</div>
+
+								<!--<img src="assets/img/illus/letter-e.png" alt="e" width="1000" height="1000" class="letter letter-9">-->
+							</div>
+						</div><!-- .typography-container -->
+					</div><!-- .illustration-container -->
+				</div><!-- .section-background -->
+			</section><!-- .section-conclusion -->
+			<section>
+<div id="sketch-holder">
+      <button id="sketch-button" class="btn">
+      </button>
+    </div>
+  </section>
+	<section class="site-section section-footer fullscreen">
+		<div class="section-body">
+			<h2 class="section-title">
+				<span class="word">The Team</span>
+
+				<span class="rect" data-level="0.5"></span>
+			</h2>
+
+			<div class="section-content">
+				<div class="columns clearfix scroll-parallax" data-level="2">
+					<div class="column">
+						<div class="column-inner">
+							<h2 class="column-title">
+								Jungmin Han
+							</h2>
+							<div class="column-content rte">
+								<p>Jungmin is a building scientist and an architectural designer. She likes elephants and cheesecakes.</p>
+								<img src="img/team/ellie.jpg" alt="ellie">
+							</div><!-- .column-content -->
+						</div><!-- .column-inner -->
+					</div><!-- .column -->
+
+					<div class="column">
+						<div class="column-inner">
+							<h2 class="column-title">
+								Jiabao Li
+							</h2>
+
+							<div class="column-content rte">
+								<p>
+								Jiabao is a speculative designer and artist, interested in using emerging technologies to reshape design and art.
+								</p>
+								<img src="img/team/jiabao.jpg" alt="Jiabao">
+							</div><!-- .column-content -->
+						</div><!-- .column-inner -->
+					</div><!-- .column -->
+
+					<div class="column">
+						<div class="column-inner">
+							<h2 class="column-title">
+								Wenying Wu
+							</h2>
+
+							<div class="column-content rte">
+								<p>Kally is a lazy programmer, ex-architect, and HCI enthusiastic. She loves old cameras and anything that falls between techy and artsy-fartsy.</p>
+								<img src="img/team/kally.jpg" alt="kally">
+
+							</div><!-- .column-content -->
+						</div><!-- .column-inner -->
+					</div><!-- .column -->
+				</div><!-- .columns -->
+			</div><!-- .section-content -->
+		</div><!-- .section-body -->
+
+		<div class="section-background">
+			<div class="top-mask"></div>
+			<div class="illustration-container">
+				<img src="data:image/gif;base64,R0lGODdhAQABAPAAAP///wAAACwAAAAAAQABAEACAkQBADs=" data-src="assets/img/illus/footer-freewrite.png" alt="" width="1300" height="1183" class="illustration freewrite queue-loading rwd" />
+				<img src="data:image/gif;base64,R0lGODdhAQABAPAAAP///wAAACwAAAAAAQABAEACAkQBADs=" data-src="assets/img/illus/footer-hand.gif" alt="" width="561" height="435" class="illustration hand queue-loading gif" />
+			</div><!-- .illustration-container -->
+		</div><!-- .section-background -->
+	</section><!-- .section-footer -->
+		</div><!-- .global-container -->
+
+		<!-- VARS JS -->
+		<script src="https://d3js.org/d3.v4.min.js"></script>
+
+		<!--annimated bubble chart-->
+		<script src="https://unpkg.com/d3-force-attract@latest"></script>
+		<script src="https://unpkg.com/d3-force-cluster@latest"></script>
+		<script src="js/resource/d3.js"></script>
+		<script src="js/vendor/jquery-1.12.4.min.js"></script>
+		<script src="js/bootstrap.min.js"></script>
+		<script src="js/owl.carousel.min.js"></script>
+		<script src="js/slick.min.js"></script>
+		<script src="js/jquery.ajaxchimp.min.js"></script>
+		<script src="js/plugins.js"></script>
+
+		<script src="js/main.js"></script>
+		<script src="js/mainStock.js"></script>
+
+		<script src="js/bubble.js"></script>
+		<script src="js/bubble1.js"></script>
+		<script src="js/stop_words.js"></script>
+		<script src="js/vis.js"></script>
+		<script src="js/vis-third.js"></script>
+		<script src="js/vis-fourth.js"></script>
+		<script src="js/vis-fifth.js"></script>
+		<script src="https://d3js.org/d3.v4.min.js"></script>
+
+		<script src="js/treemap.js"></script>
+		<script src="js/linechart.js"></script>
+
+
+		<script src="js/RadarChart.js"></script>
+
+		<script src="js/main0.js"></script>
+		<!--<script src="js/main.js"></script>-->
+		<script src="js/main2.js"></script>
+		<script src="js/main3.js"></script>
+		
+
+		<script src="js/sorttable.js"></script>
+		<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+				integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+				crossorigin="anonymous"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js"
+				integrity="sha384-b/U6ypiBEHpOf/4+1nzFpr53nxSS+GLCkfwBdFNTxtclqqenISfwAzpKaMNFNmj4"
+				crossorigin="anonymous"></script>
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/js/bootstrap.min.js"
+				integrity="sha384-h0AbiXch2ZDo7tp9hKZ4TsHbi047NrKGLO3SEJAg45jXxnGIfYzk4Si90RDIqNm1"
+				crossorigin="anonymous"></script>
+		<script type='text/javascript'>
+			/* <![CDATA[ */
+			var FW = {"host":"http://freewrite.dev","tpl_dir":"http://freewrite.dev/assets"};
+			/* ]]> */
+		</script>
+
+		<!-- CORE JS -->
+		<script type="text/javascript" src="assets/js/scripts.min.js"></script>
+
+		<!-- WEB FONTS JS -->
+		<script src="js/zcl6pkc.js"></script>
+		<script>try{Typekit.load({ async: true });}catch(e){}</script>
+		<script src="js/p5/p5.js"></script>
+		<script src="js/p5/addons/p5.dom.js"></script>
+		<script src="js/draw.js"></script>
+		
+	</body>
+
+<!-- Mirrored from freewrite.bonnemarque.se/ by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 08 Dec 2017 22:19:35 GMT -->
+</html><!--  /\/\/  -->

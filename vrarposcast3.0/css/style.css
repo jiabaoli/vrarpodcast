@@ -1,0 +1,167 @@
+body {
+  background-color: #F1F3F3
+}
+
+.axis {
+  font: 15px sans-serif;
+}
+.axis path,
+.axis line {
+  fill: none;
+  stroke: #D4D8DA;
+  stroke-width: 2px;
+  shape-rendering: crispEdges;
+}
+
+#chart-area {
+  position: absolute;
+  top: 50px;
+  left: 100px;
+}
+
+.toolTip {
+  pointer-events: none;
+  position: absolute;
+  display: none;
+  min-width: 50px;
+  height: auto;
+  background: none repeat scroll 0 0 #ffffff;
+  padding: 9px 14px 6px 14px;
+  border-radius: 2px;
+  text-align: center;
+  line-height: 1.3;
+  color: #5B6770;
+  box-shadow: 0px 3px 9px rgba(0, 0, 0, .15);
+}
+.toolTip:after {
+  content: "";
+  width: 0;
+  height: 0;
+  border-left: 12px solid transparent;
+  border-right: 12px solid transparent;
+  border-top: 12px solid white;
+  position: absolute;
+  bottom: -10px;
+  left: 50%;
+  margin-left: -12px;
+}
+.toolTip span {
+  font-weight: 500;
+  color: #081F2C;
+}
+
+/* Northward tooltips */
+.d3-tip.n:after {
+  content: "\25BC";
+  margin: -1px 0 0 0;
+  top: 100%;
+  left: 0;
+  text-align: center;
+}
+
+/* Eastward tooltips */
+.d3-tip.e:after {
+  content: "\25C0";
+  margin: -4px 0 0 0;
+  top: 50%;
+  left: -8px;
+}
+
+/* Southward tooltips */
+.d3-tip.s:after {
+  content: "\25B2";
+  margin: 0 0 1px 0;
+  top: -8px;
+  left: 0;
+  text-align: center;
+}
+
+/* Westward tooltips */
+.d3-tip.w:after {
+  content: "\25B6";
+  margin: -4px 0 0 -1px;
+  top: 50%;
+  left: 100%;
+}
+
+/*    text{
+      pointer-events:none;
+    }*/
+
+.details{
+  color:white;
+}
+
+
+
+
+/**** ADD YOUR STYLES ****/
+
+
+.axis {
+  font-family: sans-serif;
+  fill: #d35400;
+  font-size: 12px;
+}
+/*.line {*/
+  /*fill: none;*/
+  /*stroke: #f1c40f;*/
+  /*stroke-width: 3px;*/
+/*}*/
+.mysmoothline {
+  fill: none;
+  stroke: #e74c3c;
+  stroke-width: 3px;
+}
+.myarea {
+  fill: #e74c3c;
+  opacity: 0.5;
+}
+.circle {
+  stroke: #e74c3c;
+  stroke-width: 3px;
+  fill: #FFF;
+}
+.grid {
+  stroke: #DDD;
+  stroke-width: 1px;
+  fill: none;
+}
+
+
+/*
+
+
+ */
+
+
+#word {
+  font-size:20px;
+  fill: #fc5a66;
+}
+
+.sentence {
+  opacity: 0;
+  fill: #ff000c;
+}
+
+.highlight {
+  fill: #ff000c;
+  opacity: 0;
+}
+
+/*.line {*/
+  /*stroke: #fc7d87;*/
+  /*stroke-width:1;*/
+  /*fill:none;*/
+  /*pointer-events: none;*/
+/*}*/
+
+#vis {
+  /*font-size: 2px;*/
+}
+
+#vis .word {
+  /*opacity: 0.4;*/
+  font-size:16px;
+}

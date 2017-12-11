@@ -1,0 +1,214 @@
+body {
+    /*font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;*/
+    margin: auto;
+    position: absolute;
+
+}
+
+
+
+h2 {
+    text-align: center;
+    /*padding: 20px;*/
+    font-family: "Lucida Sans Typewriter", "Lucida Console", monaco, "Bitstream Vera Sans Mono", monospace;
+    font-size: 24px;
+    font-style: normal;
+    font-variant: normal;
+    font-weight: 500;
+    line-height: 26.4px;
+}
+
+p {
+    padding: 20px;
+}
+form {
+    position: absolute;
+    right: 200px;
+    top: 200px;
+}
+.node {
+    border: solid 1px white;
+    font: 10px sans-serif;
+    line-height: 12px;
+    overflow: hidden;
+    position: absolute;
+    text-indent: 2px;
+}
+
+
+.line {
+fill: none;
+stroke: #f1c40f;
+stroke-width: 3px;
+}
+
+.line1 {
+    fill: none;
+    stroke: #511416;
+    stroke-width: 10px;
+}
+
+.line2 {
+    fill: none;
+    stroke: #D97779;
+    stroke-width: 10px;
+}
+
+.line3 {
+    fill: none;
+    stroke: #d13438;
+    stroke-width: 10px;
+
+}
+
+.bar {
+    fill: #3C948B;
+}
+
+.bar:hover {
+    fill: #327972;
+}
+
+.axis {
+    font: 10px sans-serif;
+}
+
+.axis path,
+.axis line,
+
+.domain {
+    fill: none;
+    stroke: #888;
+    shape-rendering: crispEdges;
+}
+
+#chart-area text {
+    font-size: 11px;
+}
+
+.axis-label {
+    fill: #888;
+    font-size: 10px;
+}
+
+/*body {*/
+/*font: 10px sans-serif;*/
+/*margin: 0;*/
+/*}*/
+
+.lineStock {
+    fill: none;
+    stroke: #666;
+    stroke-width: 1px;
+}
+
+.tDate{
+    font-size: 14px;
+    font-family: monospace;
+    font-style: italic;
+}
+
+.dot {
+    fill: #d13438;
+    stroke: #fff;
+}
+
+/*#vis {*/
+    /*position: absolute;*/
+/*}*/
+
+/*#Googlechart {*/
+    /*position: absolute;*/
+/*}*/
+
+/*#Googlechart02 {*/
+    /*position: absolute;*/
+/*}*/
+
+#visualization1b rect {
+    fill: #d13438;
+}
+
+#visualization1 .node {
+    text-align: center;
+    padding: 10px;
+    font-size: 20px;
+    color: white;
+    text-display: wrap;
+}
+
+#visualization2 .node {
+    text-align: center;
+    padding: 10px;
+    /*padding-right: 20px;*/
+    /*padding-left: 10px;*/
+    font-size: 20px;
+    color: white;
+    text-display: wrap;
+}
+
+#visualization1 .node:hover {
+    opacity: 0.7;
+}
+
+#visualization2 .node:hover {
+    opacity: 0.7;
+}
+
+
+#visualization1a svg g text{
+
+    font-size: 20px;
+    /*stroke: white;*/
+    stroke-width: 0px;
+    /*stroke: white;*/
+    /*stroke: LightSlateGray;*/
+    /*stroke-linecap: round;*/
+    fill: white;
+    /*vector-effect: non-scaling-stroke;*/
+}
+
+#visualization1c svg g text{
+
+    font-size: 20px;
+    /*stroke: white;*/
+    stroke-width: 0px;
+    /*stroke: white;*/
+    /*stroke-width: 2px;*/
+    /*stroke: LightSlateGray;*/
+    /*stroke-linecap: round;*/
+    fill: white;
+    /*vector-effect: non-scaling-stroke;*/
+}
+
+
+.carousel-item {
+    /*width: 900px;*/
+    height: auto;
+    text-align: center;
+}
+
+#visualization1a circle:hover{
+    opacity: 0.7;
+}
+
+#visualization1c circle:hover{
+    opacity: 0.7;
+}
+
+#chart-area-stock #temp-Chart #temp-Chart2 #temp-Chart3 {
+    position: absolute;
+    /*padding: 20px;*/
+    /*text-align: center;*/
+}
+
+
+/*#Googlechart {*/
+    /*padding: 20px;*/
+    /*text-align: center;*/
+/*}*/
+
+/*#Googlechart02 {*/
+    /*padding: 20px;*/
+    /*text-align: center;*/
+/*}*/
