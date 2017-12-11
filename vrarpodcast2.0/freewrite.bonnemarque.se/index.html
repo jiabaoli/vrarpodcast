@@ -88,6 +88,8 @@
 	<script src="https://rawgit.com/ngokevin/aframe-animation-component/master/dist/aframe-animation-component.min.js"></script>
 	<script src="https://rawgit.com/protyze/aframe-curve-component/master/dist/aframe-curve-component.min.js"></script>
 	<script src="https://rawgit.com/protyze/aframe-alongpath-component/master/dist/aframe-alongpath-component.min.js"></script>
+	<!--Tooltip-->
+	<script type="text/javascript" src="http://mbostock.github.com/d3/d3.js"></script>
 	</head>
 
 	<body class="scroll-blocked">
@@ -120,9 +122,9 @@
 	<section class="site-section section-intro fullscreen">
 		<div class="section-body">
 			<h2 class="section-title scroll-parallax" data-level="5">
-				<span class="word">Your</span>
-				<span class="word">Distraction-Free</span>
-				<span class="word">Writing Tool.</span>
+				<span class="word">AR/VR</span>
+				<span class="word">PodCast</span>
+				<!--<span class="word">Writing Tool.</span>-->
 
 				<span class="rects">
 					<span class="rect scroll-parallax" data-level="0.5"></span>
@@ -132,8 +134,8 @@
 
 			<div class="section-content rte scroll-parallax" data-level="4">
 				<p>
-					See the intricate<br/>
-					workings of Freewrite.
+					Past | Present | <br/>
+					Future
 				</p>
 
 				<div class="line-bottom"></div>
@@ -216,7 +218,7 @@
 				</div><!-- .infos -->
 			</div><!-- .product-container -->
 		</div><!-- .section-background -->
-		
+
 	</section><!-- .section-intro -->
 
 			<!-- .section-iframe -->
@@ -480,14 +482,14 @@
 							</div>
 
 						</div>
-						<!--<a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">-->
-						<!--<span class="carousel-control-prev-icon" aria-hidden="true"></span>-->
-						<!--<span class="sr-only">Previous</span>-->
-						<!--</a>-->
-						<!--<a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">-->
-						<!--<span class="carousel-control-next-icon" aria-hidden="true"></span>-->
-						<!--<span class="sr-only">Next</span>-->
-						<!--</a>-->
+						<a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
+						<span class="carousel-control-prev-icon" aria-hidden="true"></span>
+						<span class="sr-only">Previous</span>
+						</a>
+						<a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
+						<span class="carousel-control-next-icon" aria-hidden="true"></span>
+						<span class="sr-only">Next</span>
+						</a>
 					</div>
 
 					&nbsp
@@ -561,25 +563,25 @@
 								<div class="svg-container">
 							<span class="svg svg-letter-f svg-letter-1"><svg version="1.1" id="letter-1-masks" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
 	 width="1000px" height="1000px" viewBox="0 0 1000 1000" enable-background="new 0 0 1000 1000" xml:space="preserve">
-  <defs>
+  <!--<defs>-->
     <mask id="letter-1-mask" x="0" y="0" width="100%" height="100%" >
-      <rect x="0" y="0" width="100%" height="100%"/>
-	<path id="letter-1-mask-1" d="M365.5,850.5h48h53v30h-65h-34h-47v-30H365.5z"/>
-	<path id="letter-1-mask-2" d="M384.5,775.167l18.667,1.333l74,14.667L466.5,880.5h-65h-34h-47l6.667-89.333L384.5,775.167z"/>
-	<path id="letter-1-mask-3" d="M373.833,705.833l26-28.667l38,30.667l64,88.667l1.333,84.667L299.833,878.5l-32.333-112l99.667,13.333
-		L373.833,705.833z"/>
-	<path id="letter-1-mask-4" d="M373.167,505.833l32.667-34l38.667,76l28.667,72.667l30,260.667L299.833,878.5l-20-210.667l91.048,28.624
-		L373.167,505.833z"/>
-	<path id="letter-1-mask-5" d="M381.833,344.5l26.667-23.333l42,22l38.667,196l14,342L299.833,878.5l-20-210.667l86.667-68.667L381.833,344.5
-		z"/>
-	<path id="letter-1-mask-6" d="M381.968,326.505l3.199-91.338l54.756,81.333l113.244,180l-50,384.667L299.833,878.5L275.5,436.833
-		L379.167,392.5L381.968,326.505z"/>
-	<path id="letter-1-mask-7" d="M321.833,230.5l130.073,4.073L498.5,316.5l165.333,168L503.167,881.167L299.833,878.5L275.5,436.833
-		l34.333-147L321.833,230.5z"/>
-	<path id="letter-1-mask-8" d="M345.833,133.833l280,80.667l-27.333,98l65.333,172L503.167,881.167L299.833,878.5L275.5,436.833
-		L267.167,130.5L345.833,133.833z"/>
-	<path id="letter-1-mask-9" d="M345.833,133.833L740.5,212.5l-44.667,98.667l-32,173.333L503.167,881.167L299.833,878.5L275.5,436.833
-		L267.167,130.5L345.833,133.833z"/>
+		<rect x="0" y="0" width="100%" height="100%"/>
+		<path id="letter-1-mask-1" d="M365.5,850.5h48h53v30h-65h-34h-47v-30H365.5z"/>
+		<path id="letter-1-mask-2" d="M384.5,775.167l18.667,1.333l74,14.667L466.5,880.5h-65h-34h-47l6.667-89.333L384.5,775.167z"/>
+		<path id="letter-1-mask-3" d="M373.833,705.833l26-28.667l38,30.667l64,88.667l1.333,84.667L299.833,878.5l-32.333-112l99.667,13.333
+			L373.833,705.833z"/>
+		<path id="letter-1-mask-4" d="M373.167,505.833l32.667-34l38.667,76l28.667,72.667l30,260.667L299.833,878.5l-20-210.667l91.048,28.624
+			L373.167,505.833z"/>
+		<path id="letter-1-mask-5" d="M381.833,344.5l26.667-23.333l42,22l38.667,196l14,342L299.833,878.5l-20-210.667l86.667-68.667L381.833,344.5
+			z"/>
+		<path id="letter-1-mask-6" d="M381.968,326.505l3.199-91.338l54.756,81.333l113.244,180l-50,384.667L299.833,878.5L275.5,436.833
+			L379.167,392.5L381.968,326.505z"/>
+		<path id="letter-1-mask-7" d="M321.833,230.5l130.073,4.073L498.5,316.5l165.333,168L503.167,881.167L299.833,878.5L275.5,436.833
+			l34.333-147L321.833,230.5z"/>
+		<path id="letter-1-mask-8" d="M345.833,133.833l280,80.667l-27.333,98l65.333,172L503.167,881.167L299.833,878.5L275.5,436.833
+			L267.167,130.5L345.833,133.833z"/>
+		<path id="letter-1-mask-9" d="M345.833,133.833L740.5,212.5l-44.667,98.667l-32,173.333L503.167,881.167L299.833,878.5L275.5,436.833
+			L267.167,130.5L345.833,133.833z"/>
     </mask>
   </defs>
    <image xlink:href="assets/img/illus/letter-f.png" x="0" y="0" height="1000px" width="1000px"/>
@@ -901,6 +903,10 @@
 
 		<!-- VARS JS -->
 		<script src="https://d3js.org/d3.v4.min.js"></script>
+
+		<!--annimated bubble chart-->
+		<script src="https://unpkg.com/d3-force-attract@latest"></script>
+		<script src="https://unpkg.com/d3-force-cluster@latest"></script>
 		<script src="js/resource/d3.js"></script>
 		<script src="js/vendor/jquery-1.12.4.min.js"></script>
 		<script src="js/bootstrap.min.js"></script>
@@ -918,6 +924,8 @@
 		<script src="js/vis-third.js"></script>
 		<script src="js/vis-fourth.js"></script>
 		<script src="js/vis-fifth.js"></script>
+		<script src="https://d3js.org/d3.v4.min.js"></script>
+
 		<script src="js/treemap.js"></script>
 		<script src="js/linechart.js"></script>
 
