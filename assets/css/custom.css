@@ -1,9 +1,44 @@
+
+
 body {
     /*font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;*/
     margin: auto;
     position: absolute;
 
 }
+
+
+
+/*
+gogogooggoogoggoogogogogogo
+ */
+
+.center {
+    margin: auto;
+    width: 50%;
+    /*border: 3px solid green;*/
+    padding: 10px;
+}
+
+
+.right {
+    float: right;
+    width: 90%;
+    /*border: 3px solid #73AD21;*/
+    padding: 10px;
+}
+
+.right2 {
+    float: right;
+    width: 80%;
+    /*border: 3px solid #73AD21;*/
+    padding: 10px;
+}
+
+
+/*
+gogogooggoogoggoogogogogogo
+ */
 
 
 
@@ -26,6 +61,8 @@ form {
     right: 200px;
     top: 200px;
 }
+
+
 .node {
     border: solid 1px white;
     font: 10px sans-serif;
@@ -36,7 +73,7 @@ form {
 }
 
 
-.line {
+.linechart {
 fill: none;
 stroke: #f1c40f;
 stroke-width: 3px;

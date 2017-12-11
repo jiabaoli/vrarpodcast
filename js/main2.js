@@ -129,7 +129,16 @@ d3.csv("data/googleTest.csv", function (data) {
 
         data.push(point);
         globalX += step;
-        index += 1;
+
+        if (index < 400) {
+            index += 1;
+        }
+        else{
+            index = 0;
+        }
+        
+        
+        
         // Draw new line
         path.datum(data)
             .attr('class', 'mysmoothline')

@@ -312,17 +312,20 @@ d3.csv("data/adoption.csv", function(data) {
 
     // define the line
     var valueline = d3.line()
+        .attr("class", "linechart")
         .x(function(d) { return x(d.year); })
         .y(function(d) { return y(d.Lowadoption); });
 
 
     // define the line
     var valueline2 = d3.line()
+        .attr("class", "linechart")
         .x(function(d) { return x(d.year); })
         .y(function(d) { return y(d.Mediumadoption); });
 
     // define the line
     var valueline3 = d3.line()
+        .attr("class", "linechart")
         .x(function(d) {
             console.log(d.year);
             return x(d.year);
