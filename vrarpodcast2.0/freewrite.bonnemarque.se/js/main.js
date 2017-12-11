@@ -175,16 +175,10 @@
 })(jQuery);
 
 
-
-const margin = {top: 10, right: 10, bottom: 50, left: 30},
+const margin = {top: 40, right: 10, bottom: 50, left: 30},
     width = 960 - margin.left - margin.right,
     height = 500 - margin.top - margin.bottom,
-    // color = d3.scaleOrdinal().range(d3.schemeCategory20c);
-    color = d3.scaleOrdinal()
-        .domain(["New York", "San Francisco", "Austin", "haha", "haho",
-                 "ss", "we", "wef", "pop", "ewe"])
-        // .range(["#912427", "#511416" , "#D13438", "#DE373B", "#B72E31"]);
-        .range([  "#D13438", "#D97779", "#9E272A", "#E1BFBF"]);
+    color = d3.scaleOrdinal().range(d3.schemeCategory20c);
 
 
 
@@ -367,8 +361,7 @@ d3.csv("data/adoption.csv", function(data) {
             return y(d.Lowadoption);
         })
         .attr("r", 5)
-        .attr("stroke", "black")
-        .attr("fill", "white");
+        .attr("fill", "steelblue");
 
     circle.enter().append("circle")
         .merge(circle)
@@ -382,8 +375,7 @@ d3.csv("data/adoption.csv", function(data) {
             return y(d.Highadoption);
         })
         .attr("r", 5)
-        .attr("stroke", "black")
-        .attr("fill", "white");
+        .attr("fill", "red");
 
     circle.enter().append("circle")
         .merge(circle)
@@ -397,8 +389,7 @@ d3.csv("data/adoption.csv", function(data) {
             return y(d.Mediumadoption);
         })
         .attr("r", 5)
-        .attr("stroke", "black")
-        .attr("fill", "white");
+        .attr("fill", "orange");
 
     xAxisGroup = g3.select(".x-axis")
         .attr("transform", "translate(25," + height + ")")
@@ -416,21 +407,21 @@ d3.csv("data/adoption.csv", function(data) {
         .text("Adoption rate (%)");
 
     g3.append("text")
-        .attr("x", (width / 2 - 380))
+        .attr("x", (width / 2 - 400))
         .attr("y", 10)
         .attr("text-anchor", "left")
         .style("font-size", "16px")
         .text("Low adoption");
 
     g3.append("text")
-        .attr("x", (width / 2 - 380))
+        .attr("x", (width / 2 - 400))
         .attr("y", 25)
         .attr("text-anchor", "left")
         .style("font-size", "16px")
         .text("Medium adoption");
 
     g3.append("text")
-        .attr("x", (width / 2 - 380))
+        .attr("x", (width / 2 - 400))
         .attr("y", 40)
         .attr("text-anchor", "left")
         .style("font-size", "16px")
@@ -442,17 +433,17 @@ d3.csv("data/adoption.csv", function(data) {
         .attr("cx", x(2016) + 25)
         .attr("cy", 35)
         .attr("r", 5)
-        .attr("fill", "#d13438");
+        .attr("fill", "red");
 
     g3.append("circle")
         .attr("cx", x(2016) + 25)
         .attr("cy", 20)
         .attr("r", 5)
-        .attr("fill", "#D97779");
+        .attr("fill", "orange");
 
     g3.append("circle")
         .attr("cx", x(2016) + 25)
         .attr("cy", 5)
         .attr("r", 5)
-        .attr("fill", "#511416");
+        .attr("fill", "steelblue");
 });

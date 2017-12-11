@@ -50,7 +50,7 @@ d3.csv("data/googleTest.csv", function (data) {
     var width1 = 1000;
     var height1 = 500;
     var globalX = 0;
-    var duration = 300;
+    var duration = 200;
     var max = 500;
     var index = 1;
     var step = 10;
