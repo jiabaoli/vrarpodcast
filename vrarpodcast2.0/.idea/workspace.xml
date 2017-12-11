@@ -14,11 +14,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="index.html" pinned="false" current-in-tab="true">
+      <file leaf-file-name="index.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/freewrite.bonnemarque.se/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="151">
-              <caret line="222" column="216" lean-forward="false" selection-start-line="222" selection-start-column="216" selection-end-line="222" selection-end-column="216" />
+            <state relative-caret-position="332">
+              <caret line="458" column="73" lean-forward="true" selection-start-line="458" selection-start-column="73" selection-end-line="458" selection-end-column="73" />
               <folding>
                 <element signature="n#src#0;n#img#0;n#div#1;n#div#1;n#section#9;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
                 <element signature="n#src#0;n#img#1;n#div#1;n#div#1;n#section#9;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
@@ -27,11 +27,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="style.css" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/freewrite.bonnemarque.se/assets/css/style.css">
+      <file leaf-file-name="bubble.js" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/freewrite.bonnemarque.se/js/resource/bubble.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-40">
-              <caret line="0" column="708" lean-forward="false" selection-start-line="0" selection-start-column="700" selection-end-line="0" selection-end-column="708" />
+            <state relative-caret-position="210">
+              <caret line="14" column="11" lean-forward="true" selection-start-line="14" selection-start-column="11" selection-end-line="14" selection-end-column="11" />
               <folding />
             </state>
           </provider>
@@ -40,9 +40,61 @@
       <file leaf-file-name="custom.css" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/freewrite.bonnemarque.se/assets/css/custom.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="142">
-              <caret line="10" column="1" lean-forward="true" selection-start-line="10" selection-start-column="1" selection-end-line="10" selection-end-column="1" />
+            <state relative-caret-position="308">
+              <caret line="144" column="26" lean-forward="true" selection-start-line="144" selection-start-column="26" selection-end-line="144" selection-end-column="26" />
               <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="treemap.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/freewrite.bonnemarque.se/js/treemap.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="1815">
+              <caret line="121" column="10" lean-forward="true" selection-start-line="121" selection-start-column="10" selection-end-line="121" selection-end-column="10" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="tooltiptest.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/freewrite.bonnemarque.se/js/tooltiptest.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="255">
+              <caret line="17" column="26" lean-forward="true" selection-start-line="17" selection-start-column="26" selection-end-line="17" selection-end-column="26" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="market_size.json" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/freewrite.bonnemarque.se/data/market_size.json">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="0">
+              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="industry.json" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/freewrite.bonnemarque.se/data/industry.json">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="0">
+              <caret line="0" column="1" lean-forward="false" selection-start-line="0" selection-start-column="1" selection-end-line="0" selection-end-column="1" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="main.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/freewrite.bonnemarque.se/js/main.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="165">
+              <caret line="183" column="71" lean-forward="false" selection-start-line="183" selection-start-column="71" selection-end-line="183" selection-end-column="71" />
+              <folding>
+                <element signature="n#!!doc" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -53,6 +105,7 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="CSS File" />
+        <option value="HTML File" />
       </list>
     </option>
   </component>
@@ -66,9 +119,26 @@
       <find>font-size</find>
       <find>width</find>
       <find>absolute</find>
-      <find>relative</find>
       <find>height</find>
       <find>iframe</find>
+      <find>relative</find>
+      <find>#</find>
+      <find>position</find>
+      <find>#visualization1</find>
+      <find>margin</find>
+      <find>red</find>
+      <find>circle</find>
+      <find>orange</find>
+      <find>steelblu</find>
+      <find>name</find>
+      <find>tooltip</find>
+      <find>bubble</find>
+      <find>diameter</find>
+      <find>dataset</find>
+      <find>bubble.js</find>
+      <find>virtual</find>
+      <find>Virtual reality: interest in experiencing tourism via VR Great Britain 2016, by age</find>
+      <find>visualization1a</find>
     </findStrings>
   </component>
   <component name="IdeDocumentHistory">
@@ -76,8 +146,12 @@
       <list>
         <option value="$PROJECT_DIR$/index.html" />
         <option value="$PROJECT_DIR$/freewrite.bonnemarque.se/js/draw.js" />
+        <option value="$PROJECT_DIR$/freewrite.bonnemarque.se/js/main.js" />
         <option value="$PROJECT_DIR$/freewrite.bonnemarque.se/assets/css/custom.css" />
+        <option value="$PROJECT_DIR$/freewrite.bonnemarque.se/js/treemap.js" />
+        <option value="$PROJECT_DIR$/freewrite.bonnemarque.se/js/tooltiptest.html" />
         <option value="$PROJECT_DIR$/freewrite.bonnemarque.se/index.html" />
+        <option value="$PROJECT_DIR$/freewrite.bonnemarque.se/js/resource/bubble.js" />
       </list>
     </option>
   </component>
@@ -88,8 +162,8 @@
     <sorting>DEFINITION_ORDER</sorting>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="122" />
-    <option name="y" value="137" />
+    <option name="x" value="17" />
+    <option name="y" value="23" />
     <option name="width" value="1250" />
     <option name="height" value="722" />
   </component>
@@ -126,14 +200,20 @@
               <item name="vrarpodcast2.0" type="b2602c69:ProjectViewProjectNode" />
               <item name="vrarpodcast2.0" type="462c0819:PsiDirectoryNode" />
               <item name="freewrite.bonnemarque.se" type="462c0819:PsiDirectoryNode" />
-              <item name="assets" type="462c0819:PsiDirectoryNode" />
+              <item name="data" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="vrarpodcast2.0" type="b2602c69:ProjectViewProjectNode" />
               <item name="vrarpodcast2.0" type="462c0819:PsiDirectoryNode" />
               <item name="freewrite.bonnemarque.se" type="462c0819:PsiDirectoryNode" />
-              <item name="assets" type="462c0819:PsiDirectoryNode" />
-              <item name="css" type="462c0819:PsiDirectoryNode" />
+              <item name="js" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="vrarpodcast2.0" type="b2602c69:ProjectViewProjectNode" />
+              <item name="vrarpodcast2.0" type="462c0819:PsiDirectoryNode" />
+              <item name="freewrite.bonnemarque.se" type="462c0819:PsiDirectoryNode" />
+              <item name="js" type="462c0819:PsiDirectoryNode" />
+              <item name="resource" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -146,6 +226,7 @@
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="HbShouldOpenHtmlAsHb" value="" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
+    <property name="DefaultHtmlFileTemplate" value="HTML File" />
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -175,15 +256,15 @@
       <workItem from="1512786344766" duration="615000" />
       <workItem from="1512869637195" duration="9896000" />
       <workItem from="1512884153552" duration="439000" />
-      <workItem from="1512885620220" duration="2458000" />
+      <workItem from="1512885620220" duration="16413000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="14565000" />
+    <option name="totallyTimeSpent" value="28520000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="122" y="137" width="1250" height="722" extended-state="0" />
+    <frame x="17" y="23" width="1250" height="722" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.1728" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
@@ -300,28 +381,96 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/freewrite.bonnemarque.se/assets/css/style.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-40">
-          <caret line="0" column="708" lean-forward="false" selection-start-line="0" selection-start-column="700" selection-end-line="0" selection-end-column="708" />
+        <state relative-caret-position="316">
+          <caret line="0" column="2587" lean-forward="false" selection-start-line="0" selection-start-column="2587" selection-end-line="0" selection-end-column="2594" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/freewrite.bonnemarque.se/js/sorttable.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-654">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <element signature="n#!!doc" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/freewrite.bonnemarque.se/js/linechart.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/freewrite.bonnemarque.se/data/industry.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="1" lean-forward="false" selection-start-line="0" selection-start-column="1" selection-end-line="0" selection-end-column="1" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/freewrite.bonnemarque.se/data/market_size.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/freewrite.bonnemarque.se/js/main.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="165">
+          <caret line="183" column="71" lean-forward="false" selection-start-line="183" selection-start-column="71" selection-end-line="183" selection-end-column="71" />
+          <folding>
+            <element signature="n#!!doc" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/freewrite.bonnemarque.se/assets/css/custom.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="142">
-          <caret line="10" column="1" lean-forward="true" selection-start-line="10" selection-start-column="1" selection-end-line="10" selection-end-column="1" />
+        <state relative-caret-position="308">
+          <caret line="144" column="26" lean-forward="true" selection-start-line="144" selection-start-column="26" selection-end-line="144" selection-end-column="26" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/freewrite.bonnemarque.se/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="151">
-          <caret line="222" column="216" lean-forward="false" selection-start-line="222" selection-start-column="216" selection-end-line="222" selection-end-column="216" />
+        <state relative-caret-position="332">
+          <caret line="458" column="73" lean-forward="true" selection-start-line="458" selection-start-column="73" selection-end-line="458" selection-end-column="73" />
           <folding>
             <element signature="n#src#0;n#img#0;n#div#1;n#div#1;n#section#9;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#src#0;n#img#1;n#div#1;n#div#1;n#section#9;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/freewrite.bonnemarque.se/js/tooltiptest.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="17" column="26" lean-forward="true" selection-start-line="17" selection-start-column="26" selection-end-line="17" selection-end-column="26" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/freewrite.bonnemarque.se/js/treemap.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1815">
+          <caret line="121" column="10" lean-forward="true" selection-start-line="121" selection-start-column="10" selection-end-line="121" selection-end-column="10" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/freewrite.bonnemarque.se/js/resource/bubble.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="210">
+          <caret line="14" column="11" lean-forward="true" selection-start-line="14" selection-start-column="11" selection-end-line="14" selection-end-column="11" />
+          <folding />
         </state>
       </provider>
     </entry>
