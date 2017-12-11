@@ -33,7 +33,7 @@
 //     .domain(["New York", "San Francisco", "Austin", "haha", "haho",
 //         "ss", "we", "wef", "pop", "ewe"])
 //     // .range(["#912427", "#511416" , "#D13438", "#DE373B", "#B72E31"]);
-//     .range([  "#6F257F", "#BD78CB", "#8A5894"]);
+//     .range([  "#D13438", "#D97779", "#C63135"]);
 //
 //
 //
@@ -182,7 +182,7 @@
 //
 // d3.select(self.frameElement)
 //     .style("height", diameter + "px");
-
+//
 
 var dataset2 = {
     "children": [
@@ -214,8 +214,13 @@ var dataset2 = {
     ]
 };
 
-var width = 960,
-    height = 500,
+var width2 = 430,
+    height2 = 500;
+//     padding = 1.5,
+
+
+
+var diameter = 500,
     padding = 1.5, // separation between same-color nodes
     clusterPadding = 6, // separation between different-color nodes
     maxRadius = 12;
@@ -225,7 +230,11 @@ var n = 6, // total number of nodes
 
 //    var color = d3.scaleSequential(d3.interpolateRainbow)
 //        .domain(d3.range(m));
-var color = d3.scaleOrdinal(d3.schemeCategory20c);
+var colorc = d3.scaleOrdinal()
+    .domain(["New York", "San Francisco", "Austin", "haha", "haho",
+        "ss", "we", "wef", "pop", "ewe"])
+    // .range(["#912427", "#511416" , "#D13438", "#DE373B", "#B72E31"]);
+    .range([  "#6F257F", "#BD78CB", "#8A5894"]);
 
 
 // The largest node for each cluster.
@@ -239,8 +248,8 @@ var nodes = d3.range(n).map(function () {
         d = {
             cluster: i,
             radius: r,
-            x: Math.cos(i / m * 2 * Math.PI) * 200 + width / 2 + Math.random(),
-            y: Math.sin(i / m * 2 * Math.PI) * 200 + height / 2 + Math.random(),
+            x: Math.cos(i / m * 2 * Math.PI) * 200 + width2 / 2 + Math.random(),
+            y: Math.sin(i / m * 2 * Math.PI) * 200 + height2 / 2 + Math.random(),
             text: dataset2.children[i].facilityId,
             color:dataset2.children[i].color
         };
@@ -254,11 +263,11 @@ var nodes = d3.range(n).map(function () {
 console.log(nodes);
 var simulation = d3.forceSimulation()
 // keep entire simulation balanced around screen center
-    .force('center', d3.forceCenter(width/2, height/2))
+    .force('center', d3.forceCenter(width2/2, height2/2))
 
     // pull toward center
     .force('attract', d3.forceAttract()
-        .target([width/2, height/2])
+        .target([width2/2, height2/2])
         .strength(0.01))
 
     // cluster by section
@@ -275,12 +284,12 @@ var simulation = d3.forceSimulation()
     .nodes(nodes);
 
 // var svg = d3.select('body').append('svg')
-//     .attr('width', width)
-//     .attr('height', height);
+//     .attr('width', width2)
+//     .attr('height', height2);
 var svg = d3.select("#visualization1a")
     .append("svg")
-    .attr("width", width)
-    .attr("height", height);
+    .attr("width", width2)
+    .attr("height", height2);
     // .attr("class", "bubble");
 
 var group = svg.selectAll('g')
@@ -289,7 +298,7 @@ var group = svg.selectAll('g')
 
 var node = group.append('circle')
     .style('fill', function (d) {
-        return color(d.color);
+        return colorc(d.color);
     });
 
 
@@ -335,7 +344,9 @@ var t = d3.timer(function (elapsed) {
     simulation.force('collide').strength(Math.pow(dt, 2) * 0.3);
     if (dt >= 1.0) t.stop();
 });
+//
 
+// console.log(text);
 function layoutTick (e) {
     node
         .attr('cx', function (d) { return d.x; })
