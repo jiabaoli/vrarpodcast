@@ -1,4 +1,0 @@
-# HTTrack Website Copier Cookie File
-# This file format is compatible with Netscape cookies
-.bonnemarque.se	TRUE	/	FALSE	1999999999	__cfduid	da60d3032375fea14b1a10ec6b82258111512771382
-
