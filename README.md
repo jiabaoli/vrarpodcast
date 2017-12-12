@@ -48,6 +48,15 @@ https://vimeo.com/246911142
 5. Submit a pull request 
 
 
+## Citation:
+https://bl.ocks.org/ganezasan/52fced34d2182483995f0ca3960fe228
+https://bl.ocks.org/john-guerra/0d81ccfd24578d5d563c55e785b3b40a
+
+
+
+
+
+
 
 ## License
 
