@@ -30,7 +30,7 @@ var dataset3 = {
 
 
 
-var width3 = 550,
+var width3 = 500,
     height3 = 500,
     padding = 1.5, // separation between same-color nodes
     clusterPadding = 6, // separation between different-color nodes
@@ -153,7 +153,7 @@ function dragended2 (d) {
 var transitionTime2 = 500;
 var t2 = d3.timer(function (elapsed) {
     var dt = elapsed / transitionTime2;
-    simulation2.force('collide').strength(Math.pow(dt, 2) * 0.3);
+    simulation2.force('collide').strength(Math.pow(dt, 2) * 0.05);
     if (dt >= 1.0) t2.stop();
 });
 
