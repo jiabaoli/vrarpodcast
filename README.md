@@ -1,4 +1,4 @@
-js">
+
 # VR/AR Podcast
 
 https://jiabaoli.github.io/vrarpodcast/
