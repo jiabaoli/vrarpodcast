@@ -1,27 +1,40 @@
-
-README - The README file must give an overview of what you are handing in: which parts are your code, which parts are libraries, and so on. 
-
 # vrarpodcast
 
 https://jiabaoli.github.io/vrarpodcast/
 
 Implementation
 
-	<script src="js/aframe-master.js"></script>
-	<script src="js/aframe-v0.7.1.js"></script>
-	<script src="js/util.js"></script>
-	<script src="js/components.js"></script>
-	<script src="js/cube.js"></script>
-	<script src="js/p5/p5.js"></script>
-	<script src="js/p5/addons/p5.dom.js"></script>
-	<script src="js/draw.js"></script>
+	<script src="js/aframe-master.js">
+	<script src="js/aframe-v0.7.1.js">
+	<script src="js/util.js">
+	<script src="js/components.js">
+	<script src="js/cube.js">
+	<script src="js/p5/p5.js">
+	<script src="js/p5/addons/p5.dom.js">
+	<script src="js/draw.js">
+  <script src="js/bubble.js">
+  <script src="js/bubble1.js">
+  <script src="js/treemap.js">
+  <script src="js/vis.js">
+  <script src="js/vis-third.js"> 
+  <script src="js/vis-fourth.js">
+  <script src="js/vis.fifth.js">
+  <script src="js/main.js">
+  <css src="assets/css/custom.css">
 
 
 # ${1:Project Name}
-TODO: VR/AR podcast
+VR/AR podcast
 
 ## Installation
-TODO: Describe the installation process
+Open the index.html file, wait a couple of minutes for the page to load.
+
+Open the webpage on your phone to experience VR mode. Noted that only Chrome for Android is supported for webVR, iPhone users can’t spilt the screen. Read more here for the supported devices:
+https://webvr.rocks/
+
+## Video link
+https://www.dropbox.com/sh/bjlqlw5a16gc9h0/AACotpEjhFD2SawbvRSLmT54a?dl=0
+
 
 1. Download Zipfile from github and open it in your browser.
 2. Direct link :https://jiabaoli.github.io/vrarpodcast/
