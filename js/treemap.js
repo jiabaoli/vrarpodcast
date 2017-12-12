@@ -28,11 +28,11 @@ d3.json("data/industry.json", function(error, data) {
         .enter().append("div")
         .attr("class", "node")
         .style("left", (d) => d.x0 + "px")
-        .style("top", (d) => d.y0 + "px")
-        .style("width", (d) => Math.max(0, d.x1 - d.x0 - 1) + "px")
-        .style("height", (d) => Math.max(0, d.y1 - d.y0  - 1) + "px")
-        .style("background", (d) => color(d.data.color))
-        .text((d) => d.data.size);
+.style("top", (d) => d.y0 + "px")
+.style("width", (d) => Math.max(0, d.x1 - d.x0 - 1) + "px")
+.style("height", (d) => Math.max(0, d.y1 - d.y0  - 1) + "px")
+.style("background", (d) => color(d.data.color))
+.text((d) => parseFloat(d.data.size / 660 * 100).toFixed(1) + "%");
 
     d3.selectAll("input").on("change", function change() {
         const value = this.value === "count"
@@ -44,17 +44,17 @@ d3.json("data/industry.json", function(error, data) {
             .transition()
             .duration(1500)
             .style("left", (d) => d.x0 + "px")
-            .style("top", (d) => d.y0 + "px")
-            .style("width", (d) => Math.max(0, d.x1 - d.x0 - 1) + "px")
-            .style("height", (d) => Math.max(0, d.y1 - d.y0  - 1) + "px")
+    .style("top", (d) => d.y0 + "px")
+    .style("width", (d) => Math.max(0, d.x1 - d.x0 - 1) + "px")
+    .style("height", (d) => Math.max(0, d.y1 - d.y0  - 1) + "px")
     })
 
     // add the dots with tooltips
     d3.select("#visualization1").selectAll(".node")
-        // .data(data.children)
-        // .enter()
+    // .data(data.children)
+    // .enter()
         .on("mouseover", function(d){
-            tooltip.text(d.data.name + " " + d.data.size);
+            tooltip.text(d.data.name + ": " + parseFloat(d.data.size / 660 * 100).toFixed(1) + "%");
             return tooltip.style("visibility", "visible");
         })
         .on("mousemove", function(){
@@ -88,11 +88,11 @@ d3.json("data/market_size.json", function(error, data) {
         .enter().append("div")
         .attr("class", "node")
         .style("left", (d) => d.x0 + "px")
-        .style("top", (d) => d.y0 + "px")
-        .style("width", (d) => Math.max(0, d.x1 - d.x0 - 1) + "px")
-        .style("height", (d) => Math.max(0, d.y1 - d.y0  - 1) + "px")
-        .style("background", (d) => color(d.data.color))
-        .text((d) => d.data.size);
+.style("top", (d) => d.y0 + "px")
+.style("width", (d) => Math.max(0, d.x1 - d.x0 - 1) + "px")
+.style("height", (d) => Math.max(0, d.y1 - d.y0  - 1) + "px")
+.style("background", (d) => color(d.data.color))
+.text((d) => parseInt(d.data.size * 100) + "%");
 
     d3.selectAll("input").on("change", function change() {
         const value = this.value === "count"
@@ -104,9 +104,9 @@ d3.json("data/market_size.json", function(error, data) {
             .transition()
             .duration(1500)
             .style("left", (d) => d.x0 + "px")
-            .style("top", (d) => d.y0 + "px")
-            .style("width", (d) => Math.max(0, d.x1 - d.x0 - 1) + "px")
-            .style("height", (d) => Math.max(0, d.y1 - d.y0  - 1) + "px")
+    .style("top", (d) => d.y0 + "px")
+    .style("width", (d) => Math.max(0, d.x1 - d.x0 - 1) + "px")
+    .style("height", (d) => Math.max(0, d.y1 - d.y0  - 1) + "px")
     })
 
     // add the dots with tooltips
@@ -114,7 +114,7 @@ d3.json("data/market_size.json", function(error, data) {
     // .data(data.children)
     // .enter()
         .on("mouseover", function(d){
-            tooltip2.text(d.data.name + " " + d.data.size);
+            tooltip2.text(d.data.name + ": " + parseInt(d.data.size * 100) + "%");
             return tooltip2.style("visibility", "visible");
         })
         .on("mousemove", function(){

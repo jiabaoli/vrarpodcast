@@ -11,8 +11,6 @@
 
     {"name": "Digital navigation tablets + Holographic meetings", "size": 0.04, "color":7},
 
-    {"name": "Other", "size": 0, "color":7},
-
     {"name": "Unsure", "size": 0.14, "color":8},
     {"name": "None of these", "size": 0.21, "color":8}
   ]

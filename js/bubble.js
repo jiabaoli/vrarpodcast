@@ -51,7 +51,7 @@ var dataset2 = {
 
 
 
-var width2 = 550,
+var width2 = 500,
     height2 = 500,
     padding = 1.5, // separation between same-color nodes
     clusterPadding = 6, // separation between different-color nodes
@@ -122,7 +122,7 @@ var svg = d3.select("#visualization1c")
     .append("svg")
     .attr("width", width2)
     .attr("height", height2);
-    // .attr("class", "bubble");
+// .attr("class", "bubble");
 
 var group = svg.selectAll('g')
     .data(nodes)
@@ -139,10 +139,10 @@ var text2 = group.append("text")
         return d.text;
     })
     .attr("dx", function(d) {
-       return d.x - 15 ;
+        return d.x - 15 ;
     })
     .attr("dy", function(d) {
-       return d.y;
+        return d.y;
     })
     .style("stroke", "black");
 
@@ -173,7 +173,7 @@ function dragended (d) {
 var transitionTime = 500;
 var t = d3.timer(function (elapsed) {
     var dt = elapsed / transitionTime;
-    simulation.force('collide').strength(Math.pow(dt, 2) * 0.3);
+    simulation.force('collide').strength(Math.pow(dt, 2) * 0.05);
     if (dt >= 1.0) t.stop();
 });
 

@@ -50,6 +50,13 @@ body {
   color: #081F2C;
 }
 
+.global-container {
+  background-color: #fbfbfb;
+}
+
+
+
+
 /* Northward tooltips */
 .d3-tip.n:after {
   content: "\25BC";
