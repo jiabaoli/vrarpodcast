@@ -13,6 +13,26 @@ https://webvr.rocks/
 
 https://vimeo.com/246911142
 
+## Implementation
+
+<script src="js/aframe-master.js">
+<script src="js/aframe-v0.7.1.js">
+<script src="js/util.js">
+<script src="js/components.js">
+<script src="js/cube.js">
+<script src="js/p5/p5.js">
+<script src="js/p5/addons/p5.dom.js">
+<script src="js/draw.js">
+<script src="js/bubble.js">
+<script src="js/bubble1.js">
+<script src="js/treemap.js">
+<script src="js/vis.js">
+<script src="js/vis-third.js">
+<script src="js/vis-fourth.js">
+<script src="js/vis.fifth.js">
+<script src="js/main.js">
+
+
 ## Contributing
 
 1. Fork it!
