@@ -33,7 +33,7 @@ Open the webpage on your phone to experience VR mode. Noted that only Chrome for
 https://webvr.rocks/
 
 ## Video link
-https://www.dropbox.com/sh/bjlqlw5a16gc9h0/AACotpEjhFD2SawbvRSLmT54a?dl=0
+https://vimeo.com/246911142
 
 
 1. Download Zipfile from github and open it in your browser.
