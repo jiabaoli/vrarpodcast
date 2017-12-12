@@ -14,7 +14,7 @@ https://webvr.rocks/
 https://vimeo.com/246911142
 
 ## Implementation
-
+```
 <script src="js/aframe-master.js">
 <script src="js/aframe-v0.7.1.js">
 <script src="js/util.js">
@@ -31,7 +31,9 @@ https://vimeo.com/246911142
 <script src="js/vis-fourth.js">
 <script src="js/vis.fifth.js">
 <script src="js/main.js">
-
+<script src="js/main0.js">
+<script src="js/main2.js">
+```
 
 ## Contributing
 
@@ -42,7 +44,7 @@ https://vimeo.com/246911142
 5. Submit a pull request 
 
 ## Citation
-
+```
 https://bl.ocks.org/ganezasan/52fced34d2182483995f0ca3960fe228
 https://bl.ocks.org/john-guerra/0d81ccfd24578d5d563c55e785b3b40a
 https://github.com/NUKnightLab/TimelineJS
@@ -50,9 +52,11 @@ https://trends.google.com/trends/
 https://aframe.io/
 https://p5js.org/
 http://freewrite.bonnemarque.se/
+```
 
 ## License
 
 The Harvard Unimversity License
 Copyright (c) 2017 CS 171
+
 
