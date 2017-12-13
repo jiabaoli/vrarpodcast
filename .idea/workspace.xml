@@ -6,10 +6,95 @@
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/README.md" afterPath="$PROJECT_DIR$/README.md" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/assets/css/custom.css" afterPath="$PROJECT_DIR$/assets/css/custom.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/assets/css/style.css" afterPath="$PROJECT_DIR$/assets/css/style.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/assets/js/scripts.min.js" afterPath="$PROJECT_DIR$/assets/js/scripts.min.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/css/.idea/css.iml" afterPath="$PROJECT_DIR$/css/.idea/css.iml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/css/.idea/modules.xml" afterPath="$PROJECT_DIR$/css/.idea/modules.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/css/.idea/workspace.xml" afterPath="$PROJECT_DIR$/css/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/css/animated-headlines.css" afterPath="$PROJECT_DIR$/css/animated-headlines.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/css/bootstrap.min.css" afterPath="$PROJECT_DIR$/css/bootstrap.min.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/css/font-awesome.min.css" afterPath="$PROJECT_DIR$/css/font-awesome.min.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/css/icofont.css" afterPath="$PROJECT_DIR$/css/icofont.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/css/magnific-popup.css" afterPath="$PROJECT_DIR$/css/magnific-popup.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/css/meanmenu.min.css" afterPath="$PROJECT_DIR$/css/meanmenu.min.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/css/owl.carousel.css" afterPath="$PROJECT_DIR$/css/owl.carousel.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/css/responsive.css" afterPath="$PROJECT_DIR$/css/responsive.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/css/shortcode/default.css" afterPath="$PROJECT_DIR$/css/shortcode/default.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/css/shortcode/shortcodes.css" afterPath="$PROJECT_DIR$/css/shortcode/shortcodes.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/css/slick.css" afterPath="$PROJECT_DIR$/css/slick.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/css/style.css" afterPath="$PROJECT_DIR$/css/style.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/data/.idea/data.iml" afterPath="$PROJECT_DIR$/data/.idea/data.iml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/data/.idea/modules.xml" afterPath="$PROJECT_DIR$/data/.idea/modules.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/data/.idea/workspace.xml" afterPath="$PROJECT_DIR$/data/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/data/adoption.csv" afterPath="$PROJECT_DIR$/data/adoption.csv" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/data/arRadar.json" afterPath="$PROJECT_DIR$/data/arRadar.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/data/google.csv" afterPath="$PROJECT_DIR$/data/google.csv" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/data/googleTest.csv" afterPath="$PROJECT_DIR$/data/googleTest.csv" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/data/industry.json" afterPath="$PROJECT_DIR$/data/industry.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/data/market_size.json" afterPath="$PROJECT_DIR$/data/market_size.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/data/releaseDate.csv" afterPath="$PROJECT_DIR$/data/releaseDate.csv" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/data/releaseDate2.csv" afterPath="$PROJECT_DIR$/data/releaseDate2.csv" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/data/releaseDate3.csv" afterPath="$PROJECT_DIR$/data/releaseDate3.csv" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/data/releaseDate4.csv" afterPath="$PROJECT_DIR$/data/releaseDate4.csv" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/data/techcrunch.csv" afterPath="$PROJECT_DIR$/data/techcrunch.csv" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/data/vrRadar.json" afterPath="$PROJECT_DIR$/data/vrRadar.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/fonts/fontawesome-webfont.svg" afterPath="$PROJECT_DIR$/fonts/fontawesome-webfont.svg" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/fonts/icofont.svg" afterPath="$PROJECT_DIR$/fonts/icofont.svg" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/index.html" afterPath="$PROJECT_DIR$/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/.idea/js.iml" afterPath="$PROJECT_DIR$/js/.idea/js.iml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/.idea/modules.xml" afterPath="$PROJECT_DIR$/js/.idea/modules.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/.idea/workspace.xml" afterPath="$PROJECT_DIR$/js/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/RadarChart.js" afterPath="$PROJECT_DIR$/js/RadarChart.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/aframe-master.js" afterPath="$PROJECT_DIR$/js/aframe-master.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/aframe-master.js.map" afterPath="$PROJECT_DIR$/js/aframe-master.js.map" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/aframe-master.min.js" afterPath="$PROJECT_DIR$/js/aframe-master.min.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/aframe-v0.7.1.js" afterPath="$PROJECT_DIR$/js/aframe-v0.7.1.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/aframe-v0.7.1.js.map" afterPath="$PROJECT_DIR$/js/aframe-v0.7.1.js.map" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/aframe-v0.7.1.min.js" afterPath="$PROJECT_DIR$/js/aframe-v0.7.1.min.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/application.js" afterPath="$PROJECT_DIR$/js/application.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/bootstrap.js" afterPath="$PROJECT_DIR$/js/bootstrap.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/bootstrap.min.js" afterPath="$PROJECT_DIR$/js/bootstrap.min.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/bubble.js" afterPath="$PROJECT_DIR$/js/bubble.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/bubble1.js" afterPath="$PROJECT_DIR$/js/bubble1.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/components.js" afterPath="$PROJECT_DIR$/js/components.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/cube.js" afterPath="$PROJECT_DIR$/js/cube.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/dom-example.js" afterPath="$PROJECT_DIR$/js/dom-example.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/draw.js" afterPath="$PROJECT_DIR$/js/draw.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/jquery.ajaxchimp.min.js" afterPath="$PROJECT_DIR$/js/jquery.ajaxchimp.min.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/main.js" afterPath="$PROJECT_DIR$/js/main.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/main0.js" afterPath="$PROJECT_DIR$/js/main0.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/main2.js" afterPath="$PROJECT_DIR$/js/main2.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/main3.js" afterPath="$PROJECT_DIR$/js/main3.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/mainStock.js" afterPath="$PROJECT_DIR$/js/mainStock.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/npm.js" afterPath="$PROJECT_DIR$/js/npm.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/owl.carousel.min.js" afterPath="$PROJECT_DIR$/js/owl.carousel.min.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/p5/addons/p5.dom.js" afterPath="$PROJECT_DIR$/js/p5/addons/p5.dom.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/p5/addons/p5.sound.js" afterPath="$PROJECT_DIR$/js/p5/addons/p5.sound.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/p5/addons/p5.sound.min.js" afterPath="$PROJECT_DIR$/js/p5/addons/p5.sound.min.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/p5/empty-example/index.html" afterPath="$PROJECT_DIR$/js/p5/empty-example/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/p5/empty-example/sketch.js" afterPath="$PROJECT_DIR$/js/p5/empty-example/sketch.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/p5/p5.js" afterPath="$PROJECT_DIR$/js/p5/p5.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/p5/p5.min.js" afterPath="$PROJECT_DIR$/js/p5/p5.min.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/plugins.js" afterPath="$PROJECT_DIR$/js/plugins.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/resource/areachart.js" afterPath="$PROJECT_DIR$/js/resource/areachart.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/resource/barchart.js" afterPath="$PROJECT_DIR$/js/resource/barchart.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/resource/d3.js" afterPath="$PROJECT_DIR$/js/resource/d3.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/resource/sorttable.js" afterPath="$PROJECT_DIR$/js/resource/sorttable.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/resource/stackedAreaChart.js" afterPath="$PROJECT_DIR$/js/resource/stackedAreaChart.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/resource/timeline.js" afterPath="$PROJECT_DIR$/js/resource/timeline.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/slick.min.js" afterPath="$PROJECT_DIR$/js/slick.min.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/sorttable.js" afterPath="$PROJECT_DIR$/js/sorttable.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/stop_words.js" afterPath="$PROJECT_DIR$/js/stop_words.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/treemap.js" afterPath="$PROJECT_DIR$/js/treemap.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/util.js" afterPath="$PROJECT_DIR$/js/util.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/vendor/jquery-1.12.4.min.js" afterPath="$PROJECT_DIR$/js/vendor/jquery-1.12.4.min.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/vendor/modernizr-2.8.3.min.js" afterPath="$PROJECT_DIR$/js/vendor/modernizr-2.8.3.min.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/vis-fifth.js" afterPath="$PROJECT_DIR$/js/vis-fifth.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/vis-fourth.js" afterPath="$PROJECT_DIR$/js/vis-fourth.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/vis-third.js" afterPath="$PROJECT_DIR$/js/vis-third.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/vis.js" afterPath="$PROJECT_DIR$/js/vis.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/zcl6pkc.js" afterPath="$PROJECT_DIR$/js/zcl6pkc.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vrarpodcast2.0/.idea/workspace.xml" afterPath="$PROJECT_DIR$/vrarpodcast2.0/.idea/workspace.xml" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -18,8 +103,60 @@
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+  <component name="FileEditorManager">
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file leaf-file-name="main0.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/js/main0.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="780">
+              <caret line="52" column="17" lean-forward="false" selection-start-line="52" selection-start-column="17" selection-end-line="52" selection-end-column="17" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="main2.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/js/main2.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="780">
+              <caret line="52" column="21" lean-forward="false" selection-start-line="52" selection-start-column="21" selection-end-line="52" selection-end-column="21" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="main3.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/js/main3.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="345">
+              <caret line="23" column="18" lean-forward="true" selection-start-line="23" selection-start-column="18" selection-end-line="23" selection-end-column="18" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="index.html" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/index.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="135">
+              <caret line="9" column="53" lean-forward="false" selection-start-line="9" selection-start-column="53" selection-end-line="9" selection-end-column="53" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
+  </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="IdeDocumentHistory">
+    <option name="CHANGED_PATHS">
+      <list>
+        <option value="$PROJECT_DIR$/js/main2.js" />
+        <option value="$PROJECT_DIR$/js/main0.js" />
+      </list>
+    </option>
   </component>
   <component name="JsBuildToolGruntFileManager" detection-done="true" sorting="DEFINITION_ORDER" />
   <component name="JsBuildToolPackageJson" detection-done="true" sorting="DEFINITION_ORDER" />
@@ -27,15 +164,15 @@
     <detection-done>true</detection-done>
     <sorting>DEFINITION_ORDER</sorting>
   </component>
-  <component name="ProjectFrameBounds">
-    <option name="x" value="59" />
-    <option name="y" value="131" />
+  <component name="ProjectFrameBounds" extendedState="6">
+    <option name="y" value="23" />
     <option name="width" value="1280" />
     <option name="height" value="720" />
   </component>
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="HbShouldOpenHtmlAsHb" value="" />
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -63,24 +200,27 @@
       <workItem from="1511586180258" duration="1000" />
       <workItem from="1511833375650" duration="2000" />
       <workItem from="1512982493095" duration="33000" />
+      <workItem from="1513112439102" duration="286000" />
+      <workItem from="1513129116484" duration="17000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="58000" />
+    <option name="totallyTimeSpent" value="361000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="59" y="131" width="1280" height="720" extended-state="0" />
+    <frame x="0" y="23" width="1280" height="720" extended-state="6" />
+    <editor active="true" />
     <layout>
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -99,5 +239,71 @@
   <component name="XDebuggerManager">
     <breakpoint-manager />
     <watches-manager />
+  </component>
+  <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/js/main0.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="780">
+          <caret line="52" column="17" lean-forward="false" selection-start-line="52" selection-start-column="17" selection-end-line="52" selection-end-column="17" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/main2.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="780">
+          <caret line="52" column="21" lean-forward="false" selection-start-line="52" selection-start-column="21" selection-end-line="52" selection-end-column="21" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/main3.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="345">
+          <caret line="23" column="18" lean-forward="true" selection-start-line="23" selection-start-column="18" selection-end-line="23" selection-end-column="18" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="135">
+          <caret line="9" column="53" lean-forward="true" selection-start-line="9" selection-start-column="53" selection-end-line="9" selection-end-column="53" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/main2.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="780">
+          <caret line="52" column="21" lean-forward="false" selection-start-line="52" selection-start-column="21" selection-end-line="52" selection-end-column="21" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/main0.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="780">
+          <caret line="52" column="17" lean-forward="false" selection-start-line="52" selection-start-column="17" selection-end-line="52" selection-end-column="17" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/main3.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="345">
+          <caret line="23" column="18" lean-forward="true" selection-start-line="23" selection-start-column="18" selection-end-line="23" selection-end-column="18" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="135">
+          <caret line="9" column="53" lean-forward="false" selection-start-line="9" selection-start-column="53" selection-end-line="9" selection-end-column="53" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
   </component>
 </project>

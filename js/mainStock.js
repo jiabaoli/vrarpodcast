@@ -215,7 +215,7 @@ function loadData() {
             .style("stroke-dasharray", "4,4")
             .style("opacity", 1)
             .attr("y1", 0)
-            .attr("y2", height +500);
+            .attr("y2", height +15);
 
         svg.append("text")
             .attr("class", "t")
@@ -225,7 +225,7 @@ function loadData() {
         svg.select(".t")
             .attr("transform",
                 "translate(" + 225  + "," +
-                0 + ")")
+                60 + ")")
             .text( "OCULUS" );
 
         svg.select("line.y")
@@ -240,7 +240,7 @@ function loadData() {
             .style("stroke-dasharray", "4,4")
             .style("opacity", 1)
             .attr("y1", 0)
-            .attr("y2", height+500);
+            .attr("y2", height+15);
 
 
         svg.append("text")
@@ -251,12 +251,12 @@ function loadData() {
         svg.select(".t2")
             .attr("transform",
                 "translate(" + 805  + "," +
-                -13 + ")")
+                45 + ")")
             .text( "HOLOLENS" );
 
         svg.select("line.y2")
             .attr("transform",
-                "translate(" + 855  + "," +
+                "translate(" + 825  + "," +
                 0 + ")");
 
 ///////////////////////
@@ -266,7 +266,7 @@ function loadData() {
             .style("stroke-dasharray", "4,4")
             .style("opacity", 1)
             .attr("y1", 0)
-            .attr("y2", height+600);
+            .attr("y2", height+20);
 
 
         svg.append("text")
@@ -276,13 +276,13 @@ function loadData() {
 
         svg.select(".t3")
             .attr("transform",
-                "translate(" + 850  + "," +
-                0 + ")")
+                "translate(" + 830  + "," +
+                60 + ")")
             .text( "DAYDREAM + SPECTACLES" );
 
         svg.select("line.y3")
             .attr("transform",
-                "translate(" + 915  + "," +
+                "translate(" + 895  + "," +
                 0 + ")");
 
         // lineSvg.append("path")
@@ -296,12 +296,12 @@ function loadData() {
 
         // X Axis
         svg.append("g")
-            .attr("class", "xaxis axis axis-date")
+            .attr("class", "xaxis axis axis-date1")
             .attr("transform", "translate(0," + height + ")")
             .call(xAxis);
 
-        // d3.selectAll(".axis-date .tick text")
-        //     .attr("transform", "translate(-15,20) rotate(-45)");
+        d3.selectAll(".axis-date1 .tick text");
+            // .attr("transform", "translate(-5,10) rotate(0)");
         //
 
 
@@ -445,35 +445,35 @@ function loadData() {
             focus.select(".tDate")
                 .attr("transform",
                     "translate(" + x(dd.date) + "," +
-                    0 + ")")
+                    15 + ")")
                 .text(dateForTooltip[i]);
 
 
             focus.select(".t")
                 .attr("transform",
                     "translate(" + x(dd.date) + "," +
-                    0 + ")")
+                    y(dd.close) + ")")
                 .text( "Google : " + parseNum(d0.close));
 
 
             focus.select(".t2")
                 .attr("transform",
                     "translate(" + x(dd.date) + "," +
-                    280 + ")")
+                    340 + ")")
                 .text( "Snap : " + parseNum(d0.closes));
 
 
             focus.select(".t3")
                 .attr("transform",
                     "translate(" + x(dd.date) + "," +
-                    320 + ")")
+                    360 + ")")
                 .text( "Facebook : " + parseNum(d0.closef));
 
 
             focus.select(".t4")
                 .attr("transform",
                     "translate(" + x(dd.date) + "," +
-                    350 + ")")
+                    390 + ")")
                 .text( "Microsoft : " + parseNum(d0.closem));
 
 

@@ -64,6 +64,7 @@ function loadData() {
             .range([height4, 0]);
 
         var xAxis1 = d3.axisBottom()
+            .ticks(12)
             .scale(x1);
         // .tickFormat(d3.time.format("%b %Y"))
 
@@ -115,6 +116,38 @@ function loadData() {
             .attr("dy", ".71em")
             .style("text-anchor", "end")
             .text("population");
+
+
+
+
+
+
+
+        svg5.append("line")
+            .attr("class", "y2")
+            .style("stroke", "red")
+            .style("stroke-dasharray", "4,4")
+            .style("opacity", 1)
+            .attr("y1", 0)
+            .attr("y2", height3+5);
+
+
+        svg5.append("text")
+            .attr("class", "t2")
+            .attr("x", 10)
+            .attr("y", margin3.top);
+
+        // svg3.select(".t2")
+        //     .attr("transform",
+        //         "translate(" + 805  + "," +
+        //         45 + ")")
+        //     .text( "HOLOLENS" );
+        //
+        svg5.select("line.y2")
+            .attr("transform",
+                "translate(" + 100  + "," +
+                0 + ")");
+
 
 // svg3.selectAll(".dot")
 //     .data(data)

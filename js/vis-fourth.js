@@ -35,18 +35,18 @@ function loadData() {
 
         data.forEach(function (d) {
             PriceArray.push(+d.daydream);
-            DateArray.push(d3.isoParse(d.date1));
-            DateArray2.push(d.date1);
-            dateForTooltip.push(d.date1);
+            DateArray.push(d3.isoParse(d.date3));
+            DateArray2.push(d.date3);
+            dateForTooltip.push(d.date3);
             d.daydream = (+d.daydream);
             d.spectacles = (+d.spectacles);
             console.log(d.spectacles);
-            d.date1 = (d3.isoParse(d.date1));
+            d.date1 = (d3.isoParse(d.date3));
 
             d.oculus = (+d.oculus);
 
             // console.log(d.date);
-            d.date2 = (d3.isoParse(d.date2));
+            d.date2 = (d3.isoParse(d.date3));
 
             d.hololens = (+d.hololens);
 
@@ -65,6 +65,7 @@ function loadData() {
             .range([height4, 0]);
 
         var xAxis1 = d3.axisBottom()
+            .ticks(12)
             .scale(x1);
         // .tickFormat(d3.time.format("%b %Y"))
 
@@ -73,7 +74,7 @@ function loadData() {
 
 
         x1.domain(d3.extent(data, function (d) {
-            return d.date1;
+            return d.date3;
         }));
 
         // y.domain([0, d3.max(data, function (d) {
@@ -84,7 +85,7 @@ function loadData() {
 
 
         var valueline1 = d3.line()
-            .x(function (d) {return x1(+d.date1);})
+            .x(function (d) {return x1(+d.date3);})
             .y(function (d) {return y1(+d.hololens);})
             .curve(d3.curveMonotoneX);
 
@@ -116,6 +117,35 @@ function loadData() {
             .attr("dy", ".71em")
             .style("text-anchor", "end")
             .text("population");
+
+        svg4.append("line")
+            .attr("class", "y2")
+            .style("stroke", "red")
+            .style("stroke-dasharray", "4,4")
+            .style("opacity", 1)
+            .attr("y1", 0)
+            .attr("y2", height3+5);
+
+
+        svg4.append("text")
+            .attr("class", "t2")
+            .attr("x", 10)
+            .attr("y", margin3.top);
+
+        // svg3.select(".t2")
+        //     .attr("transform",
+        //         "translate(" + 805  + "," +
+        //         45 + ")")
+        //     .text( "HOLOLENS" );
+        //
+        svg4.select("line.y2")
+            .attr("transform",
+                "translate(" + 135  + "," +
+                0 + ")");
+
+
+
+
 
 // svg3.selectAll(".dot")
 //     .data(data)

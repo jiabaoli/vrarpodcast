@@ -50,7 +50,7 @@ d3.csv("data/googleTest.csv", function (data) {
     var width1 = 1000;
     var height1 = 500;
     var globalX = 0;
-    var duration = 300;
+    var duration = 200;
     var max = 500;
     var index = 1;
     var step = 10;
@@ -92,12 +92,12 @@ d3.csv("data/googleTest.csv", function (data) {
         return dateForTooltip[i];
     }
 
-    var xAxis = d3.axisBottom().scale(x)
+    var xAxis = d3.axisBottom().scale(x);
     // .tickArguments(20,"s");
     // d3.timeDays(start, stop[, step])
     //     .timeDays(0,365,5);
     // .tickValues(createTickValuesArray(DateArray.length))
-        .tickFormat(formatAxis);
+    //     .tickFormat(formatAxis);
 
 
     var axisX = chart.append('g').attr('class', 'x axis')
@@ -162,6 +162,9 @@ d3.csv("data/googleTest.csv", function (data) {
             .attr('d', lineArea);
         // Shift the chart left
         x.domain([globalX - (max - step), globalX]);
+
+
+        xAxis.tickFormat(dateForTooltip[index]);
 
         axisX.transition()
             .duration(duration)

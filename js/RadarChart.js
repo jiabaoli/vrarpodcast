@@ -28,7 +28,7 @@ var RadarChart = {
 
         cfg.maxValue = 100;
 
-        var allAxis = (d[0].map(function(i, j){return i.area}));
+        var allAxis = (d[0].map(function(i, j){return i.area + " (" +i.value+ ") " }));
         var total = allAxis.length;
         var radius = cfg.factor*Math.min(cfg.w/2, cfg.h/2);
         var Format = d3.format('%');
@@ -64,6 +64,8 @@ var RadarChart = {
         //Text indicating at what % each level is
         for(var j=0; j<cfg.levels; j++){
             var levelFactor = cfg.factor*radius*((j+1)/cfg.levels);
+            console.log(cfg.levels);
+
             g.selectAll(".levels")
                 .data([1]) //dummy data
                 .enter()
@@ -74,7 +76,7 @@ var RadarChart = {
                 .style("font-family", "sans-serif")
                 .style("font-size", "10px")
                 .attr("transform", "translate(" + (cfg.w/2-levelFactor + cfg.ToRight) + ", " + (cfg.h/2-levelFactor) + ")")
-                // .attr("fill", "#545556")
+                .attr("fill", "#545556")
                 .attr("fill", "#737373")
                 .text((j+1)*100/cfg.levels);
         }
@@ -96,6 +98,8 @@ var RadarChart = {
             .attr("class", "line")
             .style("stroke", "grey")
             .style("stroke-width", "1px");
+
+        console.log(d);
 
         axis.append("text")
             .attr("class", "legend")
@@ -139,14 +143,17 @@ var RadarChart = {
                     z = "polygon."+d3.select(this).attr("class");
                     g.selectAll("polygon")
                         .transition(200)
+                        // .moveToBack()
                         .style("fill-opacity", 0.1);
                     g.selectAll(z)
                         .transition(200)
+                        // .moveToBack()
                         .style("fill-opacity", .7);
                 })
                 .on('mouseout', function(){
                     g.selectAll("polygon")
                         .transition(200)
+                        // .moveToBack()
                         .style("fill-opacity", cfg.opacityArea);
                 });
             series++;
@@ -176,6 +183,7 @@ var RadarChart = {
                 .style("fill", "#fff")
                 .style("stroke-width", "2px")
                 .style("stroke", cfg.color(series)).style("fill-opacity", .9)
+                // .moveToFront()
                 .on('mouseover', function (d){
                     console.log(d.area)
                     tooltip
@@ -183,6 +191,7 @@ var RadarChart = {
                         .style("top", d3.event.pageY - 80 + "px")
                         .style("display", "inline-block")
                         .html((d.area) + "<br><span>" + (d.value) + "</span>");
+
                 })
                 .on("mouseout", function(d){ tooltip.style("display", "none");});
 

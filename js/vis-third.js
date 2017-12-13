@@ -47,9 +47,9 @@ function loadData() {
 
         data.forEach(function (d) {
             PriceArray.push(+d.daydream);
-            DateArray.push(d3.isoParse(d.date1));
-            DateArray2.push(d.date1);
-            dateForTooltip.push(d.date1);
+            DateArray.push(d3.isoParse(d.date2));
+            DateArray2.push(d.date2);
+            dateForTooltip.push(d.date2);
             d.daydream = (+d.daydream);
             d.spectacles = (+d.spectacles);
             console.log(d.spectacles);
@@ -77,6 +77,7 @@ function loadData() {
             .range([height3, 0]);
 
         var xAxis = d3.axisBottom()
+            .ticks(12)
             .scale(x);
         // .tickFormat(d3.time.format("%b %Y"))
 
@@ -85,7 +86,7 @@ function loadData() {
 
 
         x.domain(d3.extent(data, function (d) {
-            return d.date1;
+            return d.date2;
         }));
 
         // y.domain([0, d3.max(data, function (d) {
@@ -96,7 +97,7 @@ function loadData() {
 
 
         var valueline = d3.line()
-            .x(function (d) {return x(+d.date1);})
+            .x(function (d) {return x(+d.date2);})
             .y(function (d) {return y(+d.oculus);})
             .curve(d3.curveMonotoneX);
 
@@ -128,6 +129,35 @@ function loadData() {
             .attr("dy", ".71em")
             .style("text-anchor", "end")
             .text("population");
+
+
+///////////////////////
+
+        svg3.append("line")
+            .attr("class", "y2")
+            .style("stroke", "red")
+            .style("stroke-dasharray", "4,4")
+            .style("opacity", 1)
+            .attr("y1", 0)
+            .attr("y2", height3+5);
+
+
+        svg3.append("text")
+            .attr("class", "t2")
+            .attr("x", 10)
+            .attr("y", margin3.top);
+
+        // svg3.select(".t2")
+        //     .attr("transform",
+        //         "translate(" + 805  + "," +
+        //         45 + ")")
+        //     .text( "HOLOLENS" );
+        //
+        svg3.select("line.y2")
+            .attr("transform",
+                "translate(" + 120  + "," +
+                0 + ")");
+
 
         // svg3.selectAll(".dot")
         //     .data(data)
